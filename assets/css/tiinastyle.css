@@ -1,18 +1,30 @@
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    color: #FDFEFE;
-    background-color: #58D68D;
-    text-align: center;
+    color: #58D68D;
 }
 h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color: #FDFEFE;
-    background-color: #58D68D;
-    text-align: center;
+    color: #58D68D;
 }
 li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+}
+a {
+    color:#58D68D;
+}
+a:hover {
+    color:black;    
+}
+.flexContainer {
+    margin: 10px 20px;
+    padding: 20px;
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #FDFEFE;
+    align-content: space-between;
+    flex-direction: row;       
 }
