@@ -23,11 +23,13 @@ sidebar {
 section {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 article {
     padding: 10px;
     margin: 10px;
     background: #FDFEFE;
-
+    display: flex;
   }
