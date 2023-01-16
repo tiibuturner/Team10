@@ -12,6 +12,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
 }
 sidebar {
+    background-color: #88d1a6;
     margin: 10px;
     min-width: 200;
     background-color: #FDFEFE;;
@@ -35,3 +36,4 @@ article {
   footer{
     background-color: #58D68D;
   }
+
