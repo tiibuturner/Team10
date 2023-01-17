@@ -8,15 +8,22 @@ h3 {
     font-size: medium;
     color: #58D68D;
 }
+figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: black;
+    text-align: right;
+}
 li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    color: black;
 }
 a {
-    color:#58D68D;
+    color:black;
 }
 a:hover {
-    color:black;    
+    color:#58D68D;    
 }
 .flexContainer {
     margin: 10px 20px;
@@ -27,4 +34,16 @@ a:hover {
     background: #FDFEFE;
     align-content: space-between;
     flex-direction: row;       
+}
+.image {
+    height: 250px;
+    background-image: url("../images/Torronsuo1.jpg");
+    background-size:cover;
+    background-position: bottom;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #FDFEFE;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
