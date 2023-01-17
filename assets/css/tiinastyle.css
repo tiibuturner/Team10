@@ -11,16 +11,16 @@ h3 {
 figcaption {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color: black;
+    color: #000000;
     text-align: right;
 }
 li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color: black;
+    color: #000000;
 }
 a {
-    color:black;
+    color:b#000000;
 }
 a:hover {
     color:#58D68D;    
