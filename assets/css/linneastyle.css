@@ -1,0 +1,22 @@
+.image{
+    background-image:url();
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 250px;
+}
+.headerfp{
+    padding: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    
+}
+
+
+a {
+    color:#001e0d;
+}
+a:hover {
+    color:rgb(177, 255, 247);    
+}
