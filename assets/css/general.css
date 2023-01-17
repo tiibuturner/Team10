@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: row;
 }
+header{
+    background-color: rgb(89, 89, 76,.5);
+    
+}
 
 
 h1{
     font-size: large;
     color: #FDFEFE;
-    background-color: #58D68D;
+    
+    
 }
 
 li{
@@ -20,11 +25,11 @@ p{
     font-family: Arial, Helvetica, sans-serif;
 }
 sidebar {
-    background-color: #88d1a6;
+    background-color:rgb(107, 131, 77);
     margin: 10px;
     min-width: 200;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -40,7 +45,7 @@ article {
   }
 
   footer{
-    background-color: #58D68D;
+    background-color:rgb(138, 145, 111);
     padding-top:  30px;
     padding-bottom: 5px;
     padding-left: 20px;
