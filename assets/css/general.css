@@ -24,7 +24,10 @@ h2{
 li{
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size:large;
+    text-align: left;
+    padding-bottom: 15px;
+    
 }
 
 p{
@@ -32,10 +35,10 @@ p{
 }
 sidebar {
     background-color:rgb(107, 131, 77);
-    margin: 10px;
-    min-width: 200;
+    margin: 0px;
+    min-width: 100;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -59,4 +62,13 @@ article {
     color: rgb(255, 255, 255);
     font-size: 25px;
   }
+
+  a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+a:hover {
+    color:rgb(163, 194, 139);    
+    text-decoration: none;
+}
 
