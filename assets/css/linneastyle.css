@@ -2,16 +2,17 @@
     background-color: rgb(143, 168, 149);
     background-image:url("../images/Torronsuo5.jpg");
     opacity: 0.7;
+    height: 250px;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    height: 250px;
+    
 }
 .headerfp{
     position:absolute;
-    top: 20%;
+    top: 12%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -87%);
     background-color: rgb(89, 89, 76,.7);
     text-align: center;
     color: rgb(255, 255, 255);
@@ -23,9 +24,6 @@
 }
 
 
-a {
-    color:#001e0d;
-}
-a:hover {
-    color:rgb(177, 255, 247);    
-}
+
+
+
