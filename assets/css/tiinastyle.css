@@ -35,16 +35,30 @@ a:hover {
     align-content: space-between;
     flex-direction: row;       
 }
-.image {
-    height: 250px;
-    background-image: url("../images/Torronsuo1.jpg");
-    background-color: rgb(89, 89, 76,.5);
+.image{
+    background-color: rgb(143, 168, 149);
+    background-image:url("../images/Torronsuo6.jpg");
+    opacity: 0.7;
+    background-repeat: no-repeat;
     background-size:cover;
-    background-position: bottom;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    background-position: center;
+    height: 250px;
+}
+.headerfp{
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    background-color: rgb(89, 89, 76,.7);
     text-align: center;
-    color: #FDFEFE;
-    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-size:xx-large;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+img {
+    float: right; 
+    margin: 0px 0px 15px 15px;
 }
