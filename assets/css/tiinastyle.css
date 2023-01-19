@@ -8,22 +8,21 @@ h3 {
     font-size: medium;
     color: #58D68D;
 }
-figcaption {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: #000000;
-    text-align: right;
-}
-li {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: #000000;
-}
 a {
-    color:#000000;
+    color: #000;
+    text-decoration: none;
 }
 a:hover {
-    color:#58D68D;    
+    color:rgb(163, 194, 139);
+    text-decoration: none;   
+}
+li span {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+li:hover span {
+    color:rgb(163, 194, 139);
+    text-decoration: none; 
 }
 .flexContainer {
     margin: 10px 20px;
