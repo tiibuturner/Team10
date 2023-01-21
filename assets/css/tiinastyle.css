@@ -59,5 +59,14 @@ li:hover span {
 }
 img {
     float: right; 
-    margin: 0px 0px 15px 15px;
+    margin: 50px;
+}
+#photoside {
+    background-color: #FDFEFE;
+    color:#FDFEFE;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    min-width: 100;
+    padding: 10px;
 }
