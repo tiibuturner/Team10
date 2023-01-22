@@ -10,9 +10,9 @@
 }
 .headerfp{
     position:absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -85%);
+    transform: translate(-50%, -80%);
     background-color: rgb(89, 89, 76,.7);
     text-align: center;
     color: rgb(255, 255, 255);
