@@ -32,6 +32,13 @@ a.pertti :hover{
     
 }
 
+img.pics:hover{
+    opacity: 1;
+    
+}
+img.pics{
+    opacity: 0.5;
+}
 
 
 
