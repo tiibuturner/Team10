@@ -40,6 +40,17 @@ img.pics{
     opacity: 0.5;
 }
 
+figure.pics{
+    color: transparent;
+
+}
+figure.pics:hover{
+    color: rgb(0, 69, 7);
+
+}
+
+
+
 
 
 
