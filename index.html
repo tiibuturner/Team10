@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/linneastyle.css">
 </head>
 <body>
-    <header class="image">
+    <header class="image row">
     
     <p class="headerfp">Kanta-Hämeen Kansallispuistot</p>
     
@@ -18,15 +18,15 @@
 
     <div class="main">
 
-        <sidebar>
+        <nav class="nav flex-column">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
                 <li><a href="page1.html">Torronsuo</a></li>
                 <li><a href="page2.html">Liesjärvi</a></li>
                 <li><a href="page3.html">Yleistä</a></li>
             </ul>
-        </sidebar>
-        <section>
+        </nav>
+        <div>
             <article>
                 <h2>Kansallispuistot</h2>
                 <p> Kansallispuistojen tarkoitus on vaalia maamme hienoimpia luontokohteita ja niiden monimuotoisuutta. Sen lisäksi tavoitteena on edistää luontoharrastusta, 
@@ -49,11 +49,14 @@
                     <li><span>Älä roskaa.</span></li>
                 </ul>
             </article>
-        <div class="pics">
+        <div class="pics flex-column">
        
-            <img src="assets/images/Torronsuo4.jpg" alt="Kanervia" width="250" height="333">
+            <img src="assets/images/Torronsuo4.jpg" alt="Kanervia" width="250" height="333" style="margin: 3%;" class="rounded float-start" >
+            <img src="assets/images/Torronsuo2.jpg" alt="Kanervia" width="250" height="333" style="margin: 3%;" class="rounded" >
+            <img src="assets/images/Liesjarvi6.jpg" alt="Kanervia" width="250" height="333" style="margin: 3%;" class="rounded" >
+            <img src="assets/images/Liesjarvi3.jpg" alt="Kanervia" width="250" height="333" style="margin: 3%;" class="rounded float-end" >
         </div>
-        </section>
+        </div>
         
     
     </div>

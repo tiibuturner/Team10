@@ -43,6 +43,18 @@ sidebar {
     display: flex;
     flex-direction: column;
 }
+nav {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    background-color:rgb(107, 131, 77);
+    margin: 0px;
+    min-width: 100;
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
 section {
     display: flex;
     flex-direction: column;
