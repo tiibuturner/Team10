@@ -44,4 +44,19 @@ article{
   margin-top: 60px;
 }
 
+u{
+  color: rgb(103, 163, 109);
+}
+
+.sidenav{
+flex-direction: column;
+margin-right: 50px;
+margin-top: 40px;
+}
+
+ul.x{
+  list-style-type: disc;
+  
+}
+
 
