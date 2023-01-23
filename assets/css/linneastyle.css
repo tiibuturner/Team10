@@ -48,7 +48,14 @@ figure.pics:hover{
     color: rgb(0, 69, 7);
 
 }
-
+.flexContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #FDFEFE;
+    align-content: space-between;
+    flex-direction: row;       
+}
 
 
 
