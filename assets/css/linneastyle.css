@@ -10,9 +10,9 @@
 }
 .headerfp{
     position:absolute;
-    top: 15%;
+    top: 125px;
     left: 50%;
-    transform: translate(-50%, -85%);
+    transform: translate(-50%, -80%);
     background-color: rgb(89, 89, 76,.7);
     text-align: center;
     color: rgb(255, 255, 255);
@@ -24,13 +24,31 @@
 }
 a.pertti{
     color: rgb(0, 0, 0);
-    font-style: bold;
+    
     
 }
 a.pertti :hover{
     color: rgb(163, 194, 139);
     
 }
+
+img.pics:hover{
+    opacity: 1;
+    
+}
+img.pics{
+    opacity: 0.5;
+}
+
+figure.pics{
+    color: transparent;
+
+}
+figure.pics:hover{
+    color: rgb(0, 69, 7);
+
+}
+
 
 
 
