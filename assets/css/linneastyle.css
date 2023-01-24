@@ -75,7 +75,7 @@ figure.pics:hover{
     flex: 25%;
    
   }
-@media (max-width: 700px){
+@media screen and (max-width: 800px){
 .flexContainer {
     padding: 10px;
     padding: 10px;

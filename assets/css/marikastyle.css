@@ -4,7 +4,6 @@ body{
 
 .headerfp{
   position:absolute;
-  margin: auto;
   top: 125px;
   left: 50%;
   transform: translate(-50%, -80%);
@@ -15,6 +14,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 20px;
   padding-right: 20px;
+  
   
 }
 
@@ -47,10 +47,16 @@ a.u:hover{
   display: flex;
   background-color: white;
   margin: 20px;
+  
 }
 
 .flexContainer{
   flex-direction: row;
   display: flex;
+}
+
+.responsive {
+  width: 70%;
+  height: auto;
 }
 
