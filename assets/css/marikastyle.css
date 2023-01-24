@@ -44,8 +44,13 @@ article{
   margin-top: 60px;
 }
 
-u{
-  color: rgb(103, 163, 109);
+a.u{
+  color: black;
+}
+
+a.u:hover{
+  color:rgb(163, 194, 139);    
+  
 }
 
 .sidenav{
@@ -55,9 +60,6 @@ margin-top: 40px;
 
 }
 
-ul.x{
-  list-style-type: disc;
-  
-}
+
 
 
