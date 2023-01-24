@@ -85,6 +85,7 @@ img {
     margin: 0px;
     min-width: 100;
     padding: 10px;
+    float: right;
 }
 .page3image {
     background-color: rgb(143, 168, 149);
