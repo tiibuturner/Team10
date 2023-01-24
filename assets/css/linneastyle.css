@@ -25,13 +25,13 @@
 }
 a.pertti{
     color: rgb(48, 125, 0);
-    
-    
-}
-a.pertti:hover{
+    text-decoration: underline;
+    }
+
+a.pertti:hover {
     color: rgb(163, 194, 139);
-    
-}
+    text-decoration: underline;
+    }
 
 
 img.pics:hover{
