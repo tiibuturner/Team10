@@ -9,11 +9,11 @@ h3 {
     color:rgb(103, 163, 109);
 }
 a {
-    color:rgb(255, 255, 255);
+    color:rgb(48, 125, 0);
     text-decoration: none;
 }
 a:hover {
-    color:rgb(163, 194, 139);
+    color: rgb(163, 194, 139);
     text-decoration: none;   
 }
 a span {
