@@ -59,8 +59,9 @@ section {
    
 }
 article {
-    padding: 10px;
-    margin: 10px;
+    margin-left: 60px;
+    margin-right: 40px;
+    margin-top: 60px;
     background: #FDFEFE;
   }
 
