@@ -18,14 +18,14 @@ body{
 }
 
 .image{
-    background-color: #a9b7e7;
+    background-color:rgb(143, 168, 149);
     background-image:url("../images/Liesjärvi1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     height: 250px;
     margin: 0px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 
@@ -36,9 +36,11 @@ body{
 
 img{
 margin: 30px;
-border-radius: 20px;
+border-radius: 10px;
+
 
 }
+
 
 article{
   margin-left: 60px;
