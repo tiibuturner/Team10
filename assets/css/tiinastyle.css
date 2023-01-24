@@ -19,6 +19,12 @@ a:hover {
 li span {
     color:rgb(255, 255, 255);
     text-decoration: none;
+    background-color:rgb(107, 131, 77);
+    text-align: left;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+    font-stretch: narrower;
 }
 li:hover span {
     color:rgb(163, 194, 139);
@@ -28,7 +34,6 @@ ul li {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    padding-bottom: 15px;
     font-size: medium;   
 }
 .flexContainer {
@@ -86,3 +91,16 @@ img {
     background-position: bottom;
     height: 250px;
 }
+.button {
+    background-color: rgb(143, 168, 149);
+    border: none;
+    color: #FDFEFE;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
