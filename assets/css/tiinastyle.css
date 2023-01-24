@@ -24,7 +24,6 @@ li span {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size:large;
-    font-stretch: narrower;
 }
 li:hover span {
     color:rgb(163, 194, 139);
@@ -79,11 +78,10 @@ img {
 }
 #photoside {
     background-color: #FDFEFE;
-    color:#FDFEFE;
     display: flex;
     flex-direction: column;
     margin: 0px;
-    min-width: 100;
+    min-width: 100px;
     padding: 10px;
 }
 .page3image {
