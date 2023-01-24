@@ -65,6 +65,12 @@ article {
     background: #FDFEFE;
   }
 
+  mar{
+    margin-left: 60px;
+    margin-right: 40px;
+    margin-top: 60px;
+  }
+
   footer{
     background-color:rgb(138, 145, 111);
     padding-top:  30px;
