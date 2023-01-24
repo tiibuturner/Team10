@@ -4,6 +4,7 @@ body{
 
 .headerfp{
   position:absolute;
+  margin: auto;
   top: 125px;
   left: 50%;
   transform: translate(-50%, -80%);
@@ -29,12 +30,6 @@ body{
 }
 
 
-  .flexContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  
-}
 
 a.u{
   color: black;
@@ -45,29 +40,17 @@ a.u:hover{
   
 }
 
-.oikea{
-flex-direction: column;
-margin-right: 50px;
-margin-top: 40px;
-display: flex;
-flex-direction: column;
-flex: 30%;
 
 
+.sidenav{
+  flex-direction: column;
+  display: flex;
+  background-color: white;
+  margin: 20px;
 }
 
-.vasen{
-  margin-left: 60px;
-  margin-right: 40px;
-  margin-top: 60px;
-  background: #FDFEFE;
-  flex: 70%;
+.flexContainer{
+  flex-direction: row;
+  display: flex;
 }
 
-@media (max-width:800px){
-  .flexContainer{
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-    }
-}
