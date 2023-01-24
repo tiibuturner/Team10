@@ -20,7 +20,7 @@ body{
 
 .image{
     background-color:rgb(143, 168, 149);
-    background-image:url("../images/Liesjärvi1.jpg");
+    background-image:url("../images/Liesjärvi1_2.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -55,8 +55,4 @@ a.u:hover{
   display: flex;
 }
 
-.responsive {
-  width: 70%;
-  height: auto;
-}
 
