@@ -75,6 +75,13 @@ dl dt dd {
 img {
     float: right; 
     margin: 50px;
+    border-radius: 25px;
+    padding: 20px; 
+}
+.responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 #photoside {
     background-color: #FDFEFE;
