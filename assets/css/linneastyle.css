@@ -62,6 +62,11 @@ figure.pics:hover{
     color: rgb(0, 69, 7);
 
 }
+
+figcaption.figc{
+    text-align: center;
+}
+
 .flexContainer {
     padding: 10px;
     padding: 10px;
@@ -84,9 +89,3 @@ figure.pics:hover{
     align-content: space-between;
     flex-direction: column;       
 }}
-
-
-
-
-
-
