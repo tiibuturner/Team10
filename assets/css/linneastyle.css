@@ -33,16 +33,29 @@ a.pertti :hover{
     
 }
 
+
 img.pics:hover{
     opacity: 1;
+    width: 250px;
+    height: auto;
+    margin: 0px;
+    border-radius: 10px;
+    min-width: 60px;
     
 }
 img.pics{
     opacity: 0.5;
+    width: 250px;
+    height: auto;
+    margin: 0px;
+    border-radius: 10px;
+    min-width: 60px;
+
 }
 
 figure.pics{
     color: transparent;
+    
 
 }
 figure.pics:hover{
@@ -60,6 +73,7 @@ figure.pics:hover{
 .flex-item {
     padding: 10px;
     flex: 25%;
+   
   }
 @media (max-width: 700px){
 .flexContainer {
