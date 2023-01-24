@@ -50,13 +50,27 @@ figure.pics:hover{
 
 }
 .flexContainer {
-    padding: 20px;
+    padding: 10px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    background: #FDFEFE;
     align-content: space-between;
     flex-direction: row;       
 }
+.flex-item {
+    padding: 10px;
+    flex: 25%;
+  }
+@media (max-width: 700px){
+.flexContainer {
+    padding: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex-direction: column;       
+}}
+
 
 
 
