@@ -9,7 +9,7 @@ h3 {
     color:rgb(103, 163, 109);
 }
 a {
-    color: #000;
+    color:rgb(103, 163, 109);
     text-decoration: none;
 }
 a:hover {
@@ -36,13 +36,17 @@ ul li {
     text-align: left;
     font-size: medium;   
 }
+dl dt dd {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;  
+}
 .flexContainer {
-    margin: 10px 20px;
-    padding: 20px;
-    width: 180px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    background: #FDFEFE;
     display: flex;
     flex-wrap: wrap;
-    background: #FDFEFE;
     align-content: space-between;
     flex-direction: row;  
     font-size: medium;     
