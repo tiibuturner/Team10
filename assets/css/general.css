@@ -124,3 +124,19 @@ img{
     
     
     }
+
+    @media screen and (max-width: 800px){
+        .main {
+            Display: flex;
+        flex-direction: column;
+        }
+    
+        ul.margin{
+            margin-top: 10%;
+          
+        }
+        
+        li{
+            text-align: center;
+        }
+    }
