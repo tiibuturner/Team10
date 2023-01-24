@@ -9,9 +9,9 @@ header{
 
 
 h1{
-    font-size: large;
-    color: #FDFEFE;
-    
+    color: rgb(255, 255, 255);
+    font-size:xx-large;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -95,15 +95,20 @@ li span {
 .eka{
     float: left;
     margin-left: 3%;
+    font-size: large;
+    color: #ffffff;
 }
 
 .toka{
     float: right;
     margin-right: 3%;
+    font-size: large;
+    color: #ffffff;
 }
 
 ul.margin{
     margin-top: 20%;
+    
 }
 
 
