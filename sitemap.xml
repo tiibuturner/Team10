@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>https://tiibuturner.github.io/Team10/index.html</loc>
+
+      <lastmod>2023-24-01</lastmod>
+
+      <priority>0.8</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://tiibuturner.github.io/Team10/page1.html</loc>
+
+      <lastmod>2023-24-01</lastmod>
+
+      <priority>0.7</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://tiibuturner.github.io/Team10/page2.html</loc>
+
+      <lastmod>2023-24-01</lastmod>
+
+      <priority>0.7</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://tiibuturner.github.io/Team10/page3.html</loc>
+
+      <lastmod>2023-24-01</lastmod>
+
+      <priority>0.6</priority>
+
+   </url>
+
+</urlset>
