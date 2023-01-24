@@ -44,11 +44,10 @@ dl dt dd {
     margin-right: 40px;
     margin-top: 40px;
     background: #FDFEFE;
-    display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    flex-direction: row;  
-    font-size: medium;     
+    font-size: medium;
+    display: inline-block; 
 }
 .image{
     background-color: rgb(143, 168, 149);
