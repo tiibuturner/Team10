@@ -34,15 +34,11 @@ li:hover span {
     color:rgb(163, 194, 139);
     text-decoration: none; 
 }
-ul li {
+dl dt dd {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    font-size: medium;   
-}
-dl dt dd {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;  
+    font-size: medium;
 }
 .flexContainer {
     margin-left: 40px;
@@ -116,4 +112,4 @@ img {
     margin: 4px 2px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
