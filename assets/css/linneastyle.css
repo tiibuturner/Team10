@@ -1,6 +1,6 @@
 .image{
     background-color: rgb(143, 168, 149);
-    background-image:url("../images/Torronsuo5.jpg");
+    background-image:url("../images/Torronsuo5_2.jpg");
     opacity: 0.7;
     height: 250px;
     background-repeat: no-repeat;
@@ -25,13 +25,13 @@
 }
 a.pertti{
     color: rgb(48, 125, 0);
-    
-    
-}
-a.pertti :hover{
+    text-decoration: underline;
+    }
+
+a.pertti:hover {
     color: rgb(163, 194, 139);
-    
-}
+    text-decoration: underline;
+    }
 
 
 img.pics:hover{
@@ -88,4 +88,24 @@ figcaption.figc{
     flex-wrap: wrap;
     align-content: space-between;
     flex-direction: column;       
-}}
+}
+.pics{
+    margin-left: 20px;
+}
+}
+
+@media screen and (max-width: 800px){
+    .main {
+        Display: flex;
+    flex-direction: column;
+    }
+
+    ul.margin{
+        margin-top: 10%;
+      
+    }
+    
+    li{
+        text-align: center;
+    }
+}

@@ -16,6 +16,7 @@ body{
   padding-right: 20px;
   
   
+  
 }
 
 .image{
@@ -32,7 +33,7 @@ body{
 
 
 a.u{
-  color: black;
+  color: rgb(48, 125, 0);
 }
 
 a.u:hover{
@@ -54,5 +55,4 @@ a.u:hover{
   flex-direction: row;
   display: flex;
 }
-
 
