@@ -21,6 +21,22 @@ a span {
     font-size:xx-large;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+a.spa{
+    color: rgb(255, 255, 255);
+    text-decoration: none;  
+
+}
+
+a.spa:hover{
+    color: rgb(163, 194, 139);
+    text-decoration: none; 
+}
+
+li.spa{
+    font-size: large;
+}
+
 li span {
     color:rgb(255, 255, 255);
     text-decoration: none;
@@ -83,20 +99,17 @@ img {
     float: right; 
     margin: 50px;
     border-radius: 25px;
-    padding: 20px; 
+    padding: 20px;
+    flex-direction: column;
+    min-width: 100px;
+    padding: 10px;
+    background-color: #FDFEFE;
+    display: flex;
 }
 .responsive {
     width: 100%;
     max-width: 400px;
     height: auto;
-}
-#photoside {
-    background-color: #FDFEFE;
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    min-width: 100px;
-    padding: 10px;
 }
 .page3image {
     background-color: rgb(143, 168, 149);

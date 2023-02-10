@@ -139,4 +139,8 @@ img{
         li{
             text-align: center;
         }
+
+        li.spa{
+            text-align: center;
+        }
     }
