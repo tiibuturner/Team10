@@ -1,8 +1,8 @@
 <?php
-$host="localhost"; //Add your SQL Server host here
+$host="db"; //Add your SQL Server host here localhost
 $user="root"; //SQL Username
 $pass="password"; //SQL Password
-$dbname="slashcoding"; //SQL Database Name
+$dbname="vieraskirja"; //SQL Database Name  slashcoding
 $con=mysqli_connect($host,$user,$pass,$dbname);
 if (mysqli_connect_errno($con))
 {

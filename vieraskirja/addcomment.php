@@ -16,7 +16,8 @@ if (!mysqli_query($con,$sql))
 {
 die('Error: ' . mysqli_error($con));
 }
-else
+else{
 echo "Values Stored in our Database!";
 mysqli_close($con);
+}
 ?>
