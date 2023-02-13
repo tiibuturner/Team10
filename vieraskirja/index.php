@@ -1,5 +1,13 @@
+<?php
+try {
+    $yhteys=mysqli_connect("db", "root", "password", "vieraskirja");
+} catch (Exception $e) {
+    header("Location:index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +16,9 @@
 </head>
 <body>
 <form action="addcomment.php" method="post" name="guest">
-Nimi: <br><input type="text" name="name">
+Nimi: <br><input type="text" name="name"><br>
 
-Sähköposti: <br><input type="text" name="email">
+Sähköposti: <br><input type="text" name="email"><br><br>
 Oletko käynyt Kanta-Hämeen kansallispuistoissa?<br>
  <?php
  $tulos=mysqli_query($yhteys, "select * from checkbox");
@@ -19,10 +27,16 @@ Oletko käynyt Kanta-Hämeen kansallispuistoissa?<br>
  }
  ?><br>
 Viesti:
+<br>
+ <textarea cols="50" name="message" rows="10"> </textarea><br><br>
 
- <textarea cols="50" name="message" rows="10"> </textarea>
-
-<input type="submit" value="Lähetä"></form>
+<input type="submit" value="Lähetä">
+<input type="reset" name="eiok" value="Tyhjennä"><br><br>
+</form>
 </body>
 </html>
+<?php 
+    //Suljetaan tietokantayhteys.
+    mysqli_close($yhteys);
+?>
 <!--https://www.slashcoding.com/create-a-simple-guestbook-using-php/-->
