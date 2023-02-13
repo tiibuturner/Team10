@@ -1,4 +1,5 @@
 <?php
+// Näyttää "tulokset"
 $host="db"; //Add your SQL Server host here localhost
 $user="root"; //SQL Username
 $pass="password"; //SQL Password
