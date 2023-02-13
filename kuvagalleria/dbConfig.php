@@ -3,7 +3,7 @@
 $dbHost     = "db";  
 $dbUsername = "root";  
 $dbPassword = "password";  
-$dbName     = "kuvagalleria";  
+$dbName     = "vieraskirja";  
   
 // Create database connection  
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);  
