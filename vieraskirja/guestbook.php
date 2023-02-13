@@ -8,11 +8,12 @@ if (mysqli_connect_errno($con))
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-$result = mysqli_query($con,"SELECT name,message FROM guestbook");
+$result = mysqli_query($con,"SELECT name,message,nimi FROM vieraskirja");
 while($row = mysqli_fetch_array($result))
 { ?>
 <h3><?php echo $row['name']; ?></h3>
 <p><?php echo $row['message']; ?></p>
+<p><?php echo $row['nimi']; ?></p>
 <?php }
 mysqli_close($con);
 ?>

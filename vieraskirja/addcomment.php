@@ -11,6 +11,7 @@ echo "<h1>Failed to connect to MySQL: " . mysqli_connect_error() ."</h1>";
 $name=$_POST['name'];
 $email=$_POST['email'];
 $message=$_POST['message'];
+$checkbox = isset ($_POST["checkbox"]) ? $_POST["checkbox"] : [];
 $sql="INSERT INTO guestbook(name,email,message) VALUES('$name','$email','$message')";
 if (!mysqli_query($con,$sql))
 {
