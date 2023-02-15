@@ -1,3 +1,11 @@
+<?php
+try {
+    $yhteys=mysqli_connect("db", "root", "password", "vieraskirja");
+} catch (Exception $e) {
+    header("Location:index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -30,7 +38,7 @@
             <li><a href="page1.html">Torronsuo</a></li>
             <li><a href="page2.html">Liesjärvi</a></li>
             <li><a href="page3.html">Yleistä</a></li>
-            <li><a href="page4.html">Vieraskirja</a></li>
+            <li><a href="page4.php">Vieraskirja</a></li>
         </ul>
     </nav>
       
@@ -60,9 +68,17 @@
         <h2>Jätä viesti</h2>
         <form id='guestbook' >
         Nimi: <br><input type='text' name='name' value='' placeholder='Nimi...'><br>
-        Sähköposti: <br><input type='text' name='email' value='' placeholder='Sähköposti...'><br>
+        Sähköposti: <br><input type='text' name='email' value='' placeholder='Sähköposti...'><br><br>
+        Oletko käynyt Kanta-Hämeen kansallispuistoissa?<br>
+         <?php
+         $tulos=mysqli_query($yhteys, "select * from checkbox");
+         while ($rivi=mysqli_fetch_object($tulos)) {
+         print "<input type='checkbox' name='checkbox[]' value='".$rivi->id."'>$rivi->nimi<br>";
+         }
+         ?><br>
         Viesti: <br><textarea cols="50" name="message" rows="10"> </textarea><br>
-        <input type='button' name='ok' value='Lähetä' onclick='lahetaKommentti(this.form);'><br><br><br>
+        <input type='button' name='ok' value='Lähetä' onclick='lahetaKommentti(this.form);'>
+        <input type="reset" name="eiok" value="Tyhjennä"><br><br>
         </form>
     </article>
            </div>

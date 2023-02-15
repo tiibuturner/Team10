@@ -1,7 +1,4 @@
 <?php
-// tupavoittajassa vain id:t
-// tupamestaruudessa tupien nimet, sisältö
-// tupaid=hid, voittajaid=jid, tupavoittaja=mielijuoma
 $name = isset ($_POST["name"]) ? $_POST["name"] : "";
 $email = isset ($_POST["email"]) ? $_POST["email"] : "";
 $nimi = isset ($_POST["checkbox"]) ? $_POST["checkbox"] : [];
@@ -23,12 +20,18 @@ if (!empty($name) && !empty($email)) {
     mysqli_stmt_bind_param($stmt, 'ss', $name, $email);
     //Suoritetaan sql- lause.
     mysqli_stmt_execute($stmt);
-
+/*
 foreach($_POST['checkbox'] as $rivi->nimi)
     {
         echo 'Checked: '.$rivi->nimi ;
     }
-
+*/
+foreach ($nimi as $puistokaynti) {
+    $sql="insert into puistokaynti(gid, cid) values(?, ?)";
+	$stmt=mysqli_prepare($yhteys, $sql);
+	mysqli_stmt_bind_param($stmt, 'ii', $last_id, $puistokaynti);
+	mysqli_stmt_execute($stmt);
+ }
 if (!empty($message)) {
 	$sql="insert into guestbook (message) values(?)";
 	$stmt=mysqli_prepare($yhteys, $sql);
@@ -52,13 +55,15 @@ if (!empty($message)) {
     <body>
 <?php
 print "<table border='1'>";
-$tulos=mysqli_query($yhteys, "select * from vieraskirja");
+$tulos=mysqli_query($yhteys, "select * from guestbook, checkbox, puistokaynti where guestbook.id=puistokaynti.gid and puistokaynti.cid=checkbox.id");
 while ($rivi=mysqli_fetch_object($tulos)) {
     print "<tr>
     <td>$rivi->name
     <td>$rivi->email
     <td>$rivi->nimi
-    <td>$rivi->message</td>
+    <td>$rivi->message
+    <td>$rivi->cid
+    </td>
     </tr>";
 }
 print "</table>";
