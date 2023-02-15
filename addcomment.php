@@ -1,8 +1,14 @@
 <?php
-$name = isset ($_POST["name"]) ? $_POST["name"] : "";
-$email = isset ($_POST["email"]) ? $_POST["email"] : "";
-$nimi = isset ($_POST["checkbox"]) ? $_POST["checkbox"] : [];
-$message = isset ($_POST["message"]) ? $_POST["message"] : "";
+// $name = isset ($_POST["name"]) ? $_POST["name"] : "";
+// $email = isset ($_POST["email"]) ? $_POST["email"] : "";
+// $nimi = isset ($_POST["checkbox"]) ? $_POST["checkbox"] : [];
+// $message = isset ($_POST["message"]) ? $_POST["message"] : "";
+$json=isset($_POST["kommentti"]) ? $_POST["kommentti"] : "";
+if (!($kommentti=tarkistaJson($json))){
+    print "Täytä kaikki kentät";
+    exit;
+}
+
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 
 try {
@@ -11,36 +17,67 @@ try {
     header("location:../html/yhteysvirhe.html");
     exit;
 }
-
-if (!empty($name) && !empty($email)) {
-    $sql="insert into guestbook (name, email) values(?, ?)";
-    //Valmistellaan sql-lause.
+$sql="insert into guestbook (name, email, message) values(?, ?, ?)";//sama kuin SHA2(?, 0)
+try{
     $stmt=mysqli_prepare($yhteys, $sql);
-    //Sijoitetaan muuttujat oikeisiin paikkoihin.
-    mysqli_stmt_bind_param($stmt, 'ss', $name, $email);
-    //Suoritetaan sql- lause.
+    mysqli_stmt_bind_param($stmt, 'sss', $kommentti->name, $kommentti->email, $kommentti->message);
     mysqli_stmt_execute($stmt);
+$sql="insert into checkbox (kaynyt) values(?)";
+try{
+    $stmt=mysqli_prepare($yhteys, $sql);
+    mysqli_stmt_bind_param($stmt, 'b', $kommentti->kaynyt);
+    mysqli_stmt_execute($stmt);
+
+}
+    mysqli_close($yhteys);
+    print $json;
+}
+catch(Exception $e){
+    print "Tunnus jo olemassa tai muu virhe!";
+}
+?>
+<?php
+function tarkistaJson($json){
+    if (empty($json)){
+        return false;
+    }
+    $kommentti=json_decode($json, false);
+    if (empty($kommentti->name) || empty($kommentti->email || empty($kommentti->message))){
+        return false;
+    }
+    return $kommentti;
+}
+?>
+<?php
+// if (!empty($name) && !empty($email)) {
+//     $sql="insert into guestbook (name, email) values(?, ?)";
+//     //Valmistellaan sql-lause.
+//     $stmt=mysqli_prepare($yhteys, $sql);
+//     //Sijoitetaan muuttujat oikeisiin paikkoihin.
+//     mysqli_stmt_bind_param($stmt, 'ss', $name, $email);
+//     //Suoritetaan sql- lause.
+//     mysqli_stmt_execute($stmt);
 /*
 foreach($_POST['checkbox'] as $rivi->nimi)
     {
         echo 'Checked: '.$rivi->nimi ;
     }
 */
-foreach ($nimi as $puistokaynti) {
-    $sql="insert into puistokaynti(gid, cid) values(?, ?)";
-	$stmt=mysqli_prepare($yhteys, $sql);
-	mysqli_stmt_bind_param($stmt, 'ii', $last_id, $puistokaynti);
-	mysqli_stmt_execute($stmt);
- }
-if (!empty($message)) {
-	$sql="insert into guestbook (message) values(?)";
-	$stmt=mysqli_prepare($yhteys, $sql);
-	mysqli_stmt_bind_param($stmt, 's', $message);
-	mysqli_stmt_execute($stmt);
- }
-   header("Location:addcomment.php");
-   exit;
-}
+// foreach ($nimi as $puistokaynti) {
+//     $sql="insert into puistokaynti(gid, cid) values(?, ?)";
+// 	$stmt=mysqli_prepare($yhteys, $sql);
+// 	mysqli_stmt_bind_param($stmt, 'ii', $last_id, $puistokaynti);
+// 	mysqli_stmt_execute($stmt);
+//  }
+// if (!empty($message)) {
+// 	$sql="insert into guestbook (message) values(?)";
+// 	$stmt=mysqli_prepare($yhteys, $sql);
+// 	mysqli_stmt_bind_param($stmt, 's', $message);
+// 	mysqli_stmt_execute($stmt);
+//  }
+//    header("Location:addcomment.php");
+//    exit;
+// }
 ?>
 <!DOCTYPE html>
 <html lang="fi">

@@ -48,6 +48,7 @@ try {
             kommentti.name=lomake.name.value;
             kommentti.email=lomake.email.value;
             kommentti.message=lomake.message.value;
+            kommentti.kaynyt=(kaynyt0.checked==true ? 2 : 1);
             var jsonKommentti=JSON.stringify(kommentti);
             result.innerHTML=jsonKommentti;
             
@@ -72,8 +73,10 @@ try {
         Oletko käynyt Kanta-Hämeen kansallispuistoissa?<br>
          <?php
          $tulos=mysqli_query($yhteys, "select * from checkbox");
+         $kaynyt=0;
          while ($rivi=mysqli_fetch_object($tulos)) {
-         print "<input type='checkbox' name='checkbox[]' value='".$rivi->id."'>$rivi->nimi<br>";
+         print "<input id='kaynyt".$kaynyt."' type='radio' name='checkbox[]' value='".$rivi->id."'>$rivi->nimi<br>";
+         $kaynyt++;
          }
          ?><br>
         Viesti: <br><textarea cols="50" name="message" rows="10"> </textarea><br>
@@ -84,6 +87,7 @@ try {
            </div>
 
     <div class="flexContainer;">
+        
         <p style="flex-grow: 1;" id='result'>
         Palaute
         </p>
