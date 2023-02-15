@@ -38,6 +38,7 @@ try{
 }
 catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";
+    mysqli_close($yhteys);
 }
 ?>
 <?php
