@@ -22,12 +22,16 @@ try{
     $stmt=mysqli_prepare($yhteys, $sql);
     mysqli_stmt_bind_param($stmt, 'sss', $kommentti->name, $kommentti->email, $kommentti->message);
     mysqli_stmt_execute($stmt);
+    
 $sql="insert into checkbox (kaynyt) values(?)";
 try{
-    $stmt=mysqli_prepare($yhteys, $sql);
-    mysqli_stmt_bind_param($stmt, 'b', $kommentti->kaynyt);
+    
+    mysqli_stmt_bind_param($stmt, 'i', $kommentti->kaynyt);
     mysqli_stmt_execute($stmt);
+    mysqli_close($yhteys);
 
+}catch(Exception $e){
+    print "Tunnus jo olemassa tai muu virhe!";
 }
     mysqli_close($yhteys);
     print $json;
