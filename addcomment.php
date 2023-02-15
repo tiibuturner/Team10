@@ -17,29 +17,18 @@ try {
     header("location:../html/yhteysvirhe.html");
     exit;
 }
-$sql="insert into guestbook (name, email, message) values(?, ?, ?)";//sama kuin SHA2(?, 0)
+$sql="insert into guestbook (name, email, message) values(?, ?, ?)";
+$sql .="insert into checkbox (kaynyt) values(?)";//sama kuin SHA2(?, 0)
 try{
     $stmt=mysqli_prepare($yhteys, $sql);
-    mysqli_stmt_bind_param($stmt, 'sss', $kommentti->name, $kommentti->email, $kommentti->message);
+    mysqli_stmt_bind_param($stmt, 'sssi', $kommentti->name, $kommentti->email, $kommentti->message, $kommentti->kaynyt);
     mysqli_stmt_execute($stmt);
-    
-$sql="insert into checkbox (kaynyt) values(?)";
-try{
-    
-    mysqli_stmt_bind_param($stmt, 'i', $kommentti->kaynyt);
-    mysqli_stmt_execute($stmt);
-    mysqli_close($yhteys);
 
 }catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";
 }
-    mysqli_close($yhteys);
     print $json;
-}
-catch(Exception $e){
-    print "Tunnus jo olemassa tai muu virhe!";
     mysqli_close($yhteys);
-}
 ?>
 <?php
 function tarkistaJson($json){
@@ -96,21 +85,21 @@ foreach($_POST['checkbox'] as $rivi->nimi)
     </head>
     <body>
 <?php
-print "<table border='1'>";
-$tulos=mysqli_query($yhteys, "select * from guestbook, checkbox, puistokaynti where guestbook.id=puistokaynti.gid and puistokaynti.cid=checkbox.id");
-while ($rivi=mysqli_fetch_object($tulos)) {
-    print "<tr>
-    <td>$rivi->name
-    <td>$rivi->email
-    <td>$rivi->nimi
-    <td>$rivi->message
-    <td>$rivi->cid
-    </td>
-    </tr>";
-}
-print "</table>";
-//Suljetaan tietokantayhteys.
-mysqli_close($yhteys);
+// print "<table border='1'>";
+// $tulos=mysqli_query($yhteys, "select * from guestbook, checkbox, puistokaynti where guestbook.id=puistokaynti.gid and puistokaynti.cid=checkbox.id");
+// while ($rivi=mysqli_fetch_object($tulos)) {
+//     print "<tr>
+//     <td>$rivi->name
+//     <td>$rivi->email
+//     <td>$rivi->nimi
+//     <td>$rivi->message
+//     <td>$rivi->cid
+//     </td>
+//     </tr>";
+// }
+// print "</table>";
+// //Suljetaan tietokantayhteys.
+// mysqli_close($yhteys);
 /* Kommentissa OG koodi.
 <?php
 $host="db"; //Add your SQL Server host here
