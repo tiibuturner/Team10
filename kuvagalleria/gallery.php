@@ -75,7 +75,7 @@
                 </div>
         </section>
         <section><div>
-                <p>Jotain ???</p>     
+                   
 <?php
         
                echo ' <div class="gallery-upload">

@@ -12,8 +12,8 @@ hr {
     height: 1px;
     border: 0;
     /* border-top: 1px solid #cbcbcb; */
-    margin:1em 0;
-    padding: 0;
+    /* margin:1em 0; */
+    /* padding: 0; */
 }
 h1{
     text-align: center;
@@ -24,7 +24,7 @@ input, select {
     vertical-align: middle;
 }
 body{
-    line-height: 1;;
+    /* line-height: 1;; */
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
     display: block;
@@ -64,7 +64,7 @@ header nav ul li{
 
 main{
     padding-top: 100px;
-    /* display: block; */
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
@@ -78,7 +78,7 @@ footer .row{
 section{
     display:inline-block;
     block-size: auto;
-    width: 100%;
+    width:fit-content;
 }
 
 .wrapper {
