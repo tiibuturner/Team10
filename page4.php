@@ -39,6 +39,7 @@ try {
             <li><a href="page2.html">Liesjärvi</a></li>
             <li><a href="page3.html">Yleistä</a></li>
             <li><a href="page4.php">Vieraskirja</a></li>
+            <li><a href="kuvagalleria/gallery.php">Kuvagalleria</a></li>
         </ul>
     </nav>
       

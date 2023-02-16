@@ -1,0 +1,177 @@
+* {
+    /* margin:0;
+    padding:0;
+    border:0;
+    outline: 0; */
+    font-size: 100%;
+    vertical-align: baseline;
+    
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    /* border-top: 1px solid #cbcbcb; */
+    margin:1em 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+   
+}
+
+input, select {
+    vertical-align: middle;
+}
+body{
+    line-height: 1;;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+nav ul{
+    list-style: none;
+}
+header {
+    background-image:url("../assets/images/Torronsuo6_2.jpg")!important; 
+    /* opacity: 0.7;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin: 0px;  */
+    /* width: 100%; */
+    /* height: 100px; */
+    
+}
+header a{
+    margin: 50px;
+}
+
+header ul{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+header nav ul li{
+    display: inline-block;
+    /* float: left; */
+    list-style: none;
+    padding: 0 16px;
+    
+    
+}
+
+main{
+    padding-top: 100px;
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+ 
+}
+footer .row{
+
+    width: 100%;
+   
+}
+section{
+    display:inline-block;
+    block-size: auto;
+    width: 100%;
+}
+
+.wrapper {
+    margin: 0 auto 0 60px;
+    display:inline-block;
+    block-size: auto;
+    width: 100%;
+    /* width: 1250px;
+    background-color: blanchedalmond; */
+    
+}
+
+.gallery-links{
+    /* overflow:hidden; */
+    margin-bottom: 30px ;
+   
+   
+}
+.gallery-links div{
+    /* overflow: hidden; */
+    margin-bottom: 10px 10px 0 ;
+    height: 100%;
+    float:left;
+   
+}
+.gallery-links .gallery-container{
+    /* float: left; */
+    width:fit-content;
+    height: auto;
+    margin: 20px 10px 0px;
+    /* background-color: aqua; */
+
+}
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+   
+
+
+}
+.gallery-container a {
+    width: 230px;
+    margin: 20px 10px 0;
+    display: inline;
+
+}
+
+.gallery-links h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.gallery-upload{
+    display:block;
+    background-color: rgba(0, 101, 52, 0.457);
+    padding: 20px;
+  
+}
+
+
+.gallery-container a div {
+    width: 100%;
+    height: 235px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.gallery-links .gallery-container a h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 16px;
+
+}
+.gallery-links .gallery-container p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+
+}
