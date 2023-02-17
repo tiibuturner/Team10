@@ -15,12 +15,6 @@ hr {
     /* margin:1em 0; */
     /* padding: 0; */
 }
-h1{
-    text-align: center;
-    color: rgb(103, 163, 109);
-
-   
-}
 
 input, select {
     vertical-align: middle;
@@ -173,6 +167,13 @@ section{
     color: black;
     text-align: center;
     /* text-transform: uppercase; */
+}
+
+.h1{
+    text-align: center;
+    color: rgb(103, 163, 109);
+
+   
 }
     @media screen and (max-width: 800px){
         main{
