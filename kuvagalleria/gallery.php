@@ -58,8 +58,8 @@
                             
                             echo ' <a href="#">
                             <div style="background-image: url(uploads/'.$row["imgFullNameGallery"].');"></div>
-                            <h3>'.$row["titleGallery"].'</h3>
-                            <p>'.$row["descGallery"].'</p>
+                            <h3 class="al">'.$row["titleGallery"].'</h3>
+                            <p class="pal">'.$row["descGallery"].'</p>
                             </a>';
                         
                         
