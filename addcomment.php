@@ -17,15 +17,14 @@ try {
     header("location:../html/yhteysvirhe.html");
     exit;
 }
-$sql="insert into guestbook (name, email, message) values(?, ?, ?)";
-$sql .="insert into checkbox (kaynyt) values(?)";//sama kuin SHA2(?, 0)
+$sql="insert into guestbook (name, email, message, kaynyt) values(?, ?, ?, ?)";
 try{
     $stmt=mysqli_prepare($yhteys, $sql);
     mysqli_stmt_bind_param($stmt, 'sssi', $kommentti->name, $kommentti->email, $kommentti->message, $kommentti->kaynyt);
     mysqli_stmt_execute($stmt);
 
 }catch(Exception $e){
-    print "Tunnus jo olemassa tai muu virhe!";
+    print "Virhe! Tarkista kaikki kohdat.";
 }
     print $json;
     mysqli_close($yhteys);
