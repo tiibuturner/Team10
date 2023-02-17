@@ -175,6 +175,9 @@ section{
 
    
 }
+input .pekka{
+    background-color: aqua;
+}
     @media screen and (max-width: 800px){
         main{
         padding-top: 50px;
