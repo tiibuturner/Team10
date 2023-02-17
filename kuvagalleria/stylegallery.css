@@ -72,7 +72,7 @@ main{
 }
 footer .row{
 
-    width: 100%;
+    width:fit-content;
    
 }
 section{
@@ -174,3 +174,14 @@ section{
     text-align: center;
     /* text-transform: uppercase; */
 }
+    @media screen and (max-width: 800px){
+        main{
+        padding-top: 50px;
+        display: block;
+        margin-left: 20px;
+        width: 100%;
+     
+        }
+
+}   
+
