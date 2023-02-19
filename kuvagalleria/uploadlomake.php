@@ -47,6 +47,7 @@
 
                     // kuvien upload lomakkeen toteutus.
                     echo ' <div class="gallery-upload">
+                    
                         <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 
                             <input type="text" name="filename" placeholder="Tiedoston nimi..."><br><br>

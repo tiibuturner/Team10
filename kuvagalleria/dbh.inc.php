@@ -1,5 +1,6 @@
 <?php
 
+// tehdään stmt tarvittavista tiedoista oma muuttujansa helpottaakseen asioita
 $servername = "db";
 $username = "root";
 $password = "password";

@@ -14,8 +14,9 @@
     <title>Galleria</title>
 </head>
 <body>
+    <!-- headeri jossa otsikko -->
     <header class="image row"><a href="index.html"></a>
-    <h1 class="headerfp">Kanta-Hämeen Kansallispuistot</h1>
+    <h1 class="headerfp">Kanta-Hämeen Kansallispuistojen kuvagalleria</h1>
     </header>
         
     <div class="main">
@@ -43,7 +44,7 @@
         <section class="gallery-links">
 
         <!-- Otsikko sivulle -->
-        <h1 class="h1">Kansallispuiston kuvagalleria</h1><br><br>
+        <h1 class="h1">Kuvagalleria</h1><br><br>
            
             <div class="wrapper">
                 
@@ -107,6 +108,7 @@
         <section>
             <div>
                 
+                <!-- lomakkeelle meno galleriasta, jos haluaa lisätä galleriaan kuvia  -->
                 <p>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</p><br>
                 <p>Pääset <a href="uploadlomake.php" ><input type="button" name="Täältä" value="Täältä" class="pekka" ></a> lisäämään omia kuviasi galleriaan.</p>
                 <br><br>           
@@ -136,6 +138,7 @@
 
     </div>
 
+    <!-- footeri -->
     <footer class="row">
 
         <div style="clear: both;">
@@ -146,7 +149,7 @@
         </div>
 
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     
