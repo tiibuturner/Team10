@@ -19,8 +19,10 @@
     </header>
         
     <div class="main">
-           
+         
+        <!-- navbarin toteutut -->
         <nav class="nav flex-column">
+            
             <ul class="margin">
                 <li><a href="../index.html">Etusivu</a></li>
                 <li><a href="../page1.html">Torronsuo</a></li>
@@ -29,6 +31,7 @@
                 <li><a href="../page4.php">Vieraskirja</a></li>
                 <li><a href="gallery.php">Kuvagalleria</a></li>
             </ul>
+
         </nav>
 
 
@@ -36,48 +39,77 @@
 
         <main>
     
+        <!-- luodaan section minne kuvat tulisivat ja clasi sille. -->
         <section class="gallery-links">
+
+        <!-- Otsikko sivulle -->
         <h1 class="h1">Kansallispuiston kuvagalleria</h1><br><br>
+           
             <div class="wrapper">
                 
                 <div class="gallery-container">
                 
                     <?php
 
-                    include_once './dbh.inc.php';
+                        // luodaan yhteys php juttuun, josta saadaan myslqi_connectioniin tarvittavat tiedot
+                        include_once './dbh.inc.php';
 
-                    $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
-                    $stmt = mysqli_stmt_init($conn);
-                    if(!mysqli_stmt_prepare($stmt, $sql)){
-                        echo "SQL statement failed!";
-                    } else{
-                        mysqli_stmt_execute($stmt);
-                        $result = mysqli_stmt_get_result($stmt);
+                        //valitaan mitä haetaan ja mistä sekä missä järjestyksessä
+                        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+
+                        // initillä alustetaann yhteydenottoa eli haetaan objectit prepare statementtiä varten. 
+                        $stmt = mysqli_stmt_init($conn);
+
+                        // katsotaan saadaanko prepare stmt toimimaan ja jos ei niin echotaan se, jotta tiedetään missä virhe
+                        if(!mysqli_stmt_prepare($stmt, $sql)){
+
+                            echo "SQL statement failed!"; 
+
+                        } 
+                    
+                        // ja jos ongelmaa ei ole niin totutetaan stmt ja haetaan resultit
+                        else{
+
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
                         
-                        while($row= mysqli_fetch_assoc($result)){
+
+                            // ja resultteja haetaan niin paljon kuin niitä on eli kaikki imagen nimet gallery tablesta
+                            while($row= mysqli_fetch_assoc($result)){
                             
-                            echo ' <a href="#">
-                            <div style="background-image: url(uploads/'.$row["imgFullNameGallery"].');"></div>
-                            <h3 class="al">'.$row["titleGallery"].'</h3>
-                            <p class="pal">'.$row["descGallery"].'</p>
-                            </a>';
+                                // ja echotaan ne eli alkuun haetaan kuvat databaseen tallennettujen nimien avulla,
+                                // jolloin kuvilla upload kansiossa on sama nimi, kuin databaseen tallentuilla tiedoilla, 
+                                // jolloin ne voidaan hakea tuolta kansiosta silla nimella.
+                                // Myos gallery tablesta haetaan kuvien title ja description kuvan alle riveina.
+
+                                echo ' <a href="#">
+                                <div style="background-image: url(uploads/'.$row["imgFullNameGallery"].');"></div>
+                                <h3 class="al">'.$row["titleGallery"].'</h3>
+                                <p class="pal">'.$row["descGallery"].'</p>
+                                </a>';
                         
                         
+
+                            }
 
                         }
-                    }
                     
 
                     
                     ?>
 
                 </div> 
-                </div>
+
+            </div>
+
         </section>
-        <section><div>
-        <p>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</p><br>
-        <p>Pääset <a href="uploadlomake.php" ><input type="button" name="Täältä" value="Täältä" class="pekka" ></a> lisäämään omia kuviasi galleriaan.</p>
-        <br><br>           
+
+        <section>
+            <div>
+                
+                <p>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</p><br>
+                <p>Pääset <a href="uploadlomake.php" ><input type="button" name="Täältä" value="Täältä" class="pekka" ></a> lisäämään omia kuviasi galleriaan.</p>
+                <br><br>           
 <?php
         
             //    echo ' <div class="gallery-upload">
@@ -96,26 +128,25 @@
             //     </div>';
 ?>
             
-                </div>
-            </section>
+            </div>
+
+        </section>
 
         </main>
+
     </div>
+
     <footer class="row">
+
         <div style="clear: both;">
-        <p class="eka">Tiina, Marika & Linnea @ 2023</p>
-        <p class="toka">Kuvat © Marika Salonen</p>
+
+            <p class="eka">Tiina, Marika & Linnea @ 2023</p>
+            <p class="toka">Kuvat © Marika Salonen</p>
+
         </div>
+
     </footer>
-
-
-    <script>
-    Mene(){
-         
-        window.open(uploadlomake.php);
-        
-        }
-    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     
