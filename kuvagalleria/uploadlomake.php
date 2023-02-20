@@ -13,6 +13,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/general.css">
     <link rel="stylesheet" href="../assets/css/linneastyle.css">
+    <link rel="stylesheet" href="../kuvagalleria/stylegalleryupload.css">
     
 </head>
 <body>
@@ -42,9 +43,9 @@ session_start();
 
             </nav>
 
-        <section>
+        <div class="mar">
 
-            <h1 class="h1">Kuvien lataus kansallispuiston kuvagalleriaan</h1>
+            <h1 class="h1">Kuvien lataus kansallispuiston kuvagalleriaan</h1><br><br>
 
                 <div class="gallery-container">
                     
@@ -54,7 +55,7 @@ session_start();
                         // session_start();
                         print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
                     
-                        print "<a href='kirjauduulos.php'>Kirjaudu ulos</a>";
+                        print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a>";
                         // kuvien upload lomakkeen toteutus.
                         echo ' <div class="gallery-upload">
                     
@@ -71,9 +72,9 @@ session_start();
                         </div>';
 
                     } else {
-                        print "Et ole kirjautuneena. Jos haluat kirjautua ladataksesi kuvia galleriaan, pääset tekemään sen täältä <a href='../kirjaudu.php'>Kirjaudu sisään</a>";
+                        print "Et ole kirjautuneena. Jos haluat kirjautua ladataksesi kuvia galleriaan, pääset tekemään sen täältä <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
                         print "<br><br>";
-                        print "Onko sinulla vielä tunnuksia kirjautumiseen? Jos ei niin voit rekisteröityä sivullemme täältä. <a href='../rekisteroityminen.html'>Rekisteröidy</a>";
+                        print "Onko sinulla vielä tunnuksia kirjautumiseen? Jos ei niin voit rekisteröityä sivullemme täältä. <a class='marnie' href='../rekisteroityminen.html'>Rekisteröidy</a>";
                     }
 
 
@@ -81,7 +82,7 @@ session_start();
 
                 </div>
         
-        </section>
+                </div>
 
         </div>
     
