@@ -14,7 +14,7 @@
     <title>Galleria</title>
 </head>
 <body>
-<div class="wrapper wrapper-main initial-scale=1.0">
+<div class="wrapper-main">
     <!-- headeri jossa otsikko -->
     <header class="image row"><a href="../index.html"></a>
     <h1 class="headerfp">Kanta-Hämeen Kansallispuistojen kuvagalleria</h1>
@@ -47,7 +47,7 @@
         <!-- Otsikko sivulle -->
         <h1 class="h1">Kuvagalleria</h1><br><br>
            
-           
+            <div class="wrapper">
                 
                 <div class="gallery-container">
                 

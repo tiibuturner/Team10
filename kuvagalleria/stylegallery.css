@@ -261,7 +261,13 @@ a.marnie:hover{
         text-align: center;
        
        }
-     
+      ul.margin{
+        text-align:justify;
+      }
+
+      .wrapper{
+        margin-left: 0%;
+      }
       
 
 }   
