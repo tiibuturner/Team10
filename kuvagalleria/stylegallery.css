@@ -15,12 +15,6 @@ hr {
     /* margin:1em 0; */
     /* padding: 0; */
 }
-h1{
-    text-align: center;
-    color: rgb(103, 163, 109);
-
-   
-}
 
 input, select {
     vertical-align: middle;
@@ -72,7 +66,7 @@ main{
 }
 footer .row{
 
-    width: 100%;
+    width:fit-content;
    
 }
 section{
@@ -174,3 +168,24 @@ section{
     text-align: center;
     /* text-transform: uppercase; */
 }
+
+.h1{
+    text-align: center;
+    color: rgb(103, 163, 109);
+
+   
+}
+input .pekka{
+    background-color: aqua;
+}
+    @media screen and (max-width: 800px){
+        main{
+        padding-top: 50px;
+        display: block;
+        margin-left: 20px;
+        width: 100%;
+     
+        }
+
+}   
+

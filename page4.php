@@ -49,7 +49,7 @@ try {
             kommentti.name=lomake.name.value;
             kommentti.email=lomake.email.value;
             kommentti.message=lomake.message.value;
-            kommentti.kaynyt=(kaynyt0.checked==true ? 2 : 1);
+            kommentti.kaynyt=(kaynyt0.checked==true ? 1 : 2);
             var jsonKommentti=JSON.stringify(kommentti);
             result.innerHTML=jsonKommentti;
             
