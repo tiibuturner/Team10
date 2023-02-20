@@ -10,11 +10,11 @@
         <h1>Henkilötietojen lisäys</h1>
 
         <form action="rekisteroidy.php" method="post">
-            Tunnus:<br> <input type="text" name="tunnus" value="" size="25"><br><br>
-            Salasana:<br> <input type="password" name="salasana" value="" size="25"><br><br>
-            Etunimi:<br> <input type="text" name="etunimi" value="" size="25"><br><br>
-            Sukunimi:<br> <input type="text" name="sukunimi" value="" size="25"><br><br>
-            <input type="submit" name="ok" value="OK"><br>
+            Tunnus:<br> <input type="text" name="tunnus" value="" size="25" required oninvalid="this.setCustomValidity('Pakollinen tieto. Kirjoita tunnuksesi tähän.')"><br><br>
+            Salasana:<br> <input type="password" name="salasana" value="" size="25" required oninvalid="this.setCustomValidity('Pakollinen tieto. Kirjoita salasanasi tähän.')"><br><br>
+            Etunimi:<br> <input type="text" name="etunimi" value="" size="25" required oninvalid="this.setCustomValidity('Pakollinen tieto. Kirjoita etunimesi tähän.')"><br><br>
+            Sukunimi:<br> <input type="text" name="sukunimi" value="" size="25" required oninvalid="this.setCustomValidity('Pakollinen tieto. Kirjoita sukunimesi tähän.')"><br><br>
+            <input type="submit" name="ok" value="OK" ><br>
 
         </form>
     </body>
