@@ -19,7 +19,7 @@ session_start();
 <body>
     
     <!-- header osuus -->
-    <header class="image row"><a href="index.html"></a>
+    <header class="image row"><a href="../index.html"></a>
 
         <h1 class="headerfp">Kanta-Hämeen Kansallispuistot</h1>
 
@@ -43,7 +43,7 @@ session_start();
 
             </nav>
 
-        <div class="mar">
+        <div class="mar wrapper">
             
             <h2 >Kuvien lataus kansallispuiston kuvagalleriaan</h2><br>
 

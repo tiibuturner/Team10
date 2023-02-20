@@ -26,16 +26,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 nav ul{
     list-style: none;
 }
-header.headerfp {
-    background-image:url("../assets/images/Liesjarvi6_2.jpg")!important; 
-    /* opacity: 0.7;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    margin: 0px;  */
-    /* width: 100%; */
-    /* height: 100px; */
+header{
+    width:100%;
+    padding-right: 10%;
+    
+}
+header.image {
+    background-image:url("../assets/images/Liesjarvi7_2.jpg")!important; 
     
 }
 header a{
@@ -45,7 +42,7 @@ header a{
 header ul{
     display: block;
     margin: 0 auto;
-    width: fit-content;
+    width:auto;
 }
 header nav ul li{
     display: inline-block;
@@ -59,14 +56,14 @@ header nav ul li{
 main{
     padding-top: 100px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 60px;
+    /* margin-right: 60px; */
     width: 75%;
  
 }
 footer .row{
 
-    width:fit-content;
+    width:auto;
    
 }
 section{
@@ -153,17 +150,17 @@ section{
 .gallery-links .gallery-container a h3{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 550;
     color: rgb(103, 163, 109);
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-top: 16px;
 
 }
 .gallery-links .gallery-container p{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 530;
     color: black;
     text-align: center;
     /* text-transform: uppercase; */
@@ -174,6 +171,18 @@ section{
     color: rgb(103, 163, 109);
 
    
+}
+
+div.dal{
+    margin-bottom: 10px;
+}
+
+h3.al{
+    line-height: 1;
+}
+
+p.pal{
+    line-height: 1;
 }
 
 
@@ -198,12 +207,62 @@ a.marnie:hover{
 
     @media screen and (max-width: 800px){
         main{
-        padding-top: 50px;
+        /* padding-top: 50px;
         display: block;
-        margin-left: 20px;
-        width: 100%;
+        margin: 0;
+        margin-left: 5%; */
+        width: 75%;
      
         }
+
+        header{
+            width:100%;
+         
+        }
+       
+        .gallery-container a div {
+        
+            width: 100%;
+            height: 235px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+        .gallery-links .gallery-container a h3{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:large;
+            font-weight: 550;
+            color: rgb(103, 163, 109);
+            text-align: center;
+            /* text-transform: uppercase; */
+            padding-top: 16px;
+        
+        }
+        .gallery-links .gallery-container p{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:medium;
+            font-weight: 500;
+            color: black;
+            text-align: center;
+            /* text-transform: uppercase; */
+        }
+      
+       .wrapper-main{
+        margin: 0 auto;
+        width:100%;
+       }
+       .lomakkeelle{
+        margin-left: 5%;
+        margin-right: 5%;
+       }
+
+       .h1{
+        text-align: center;
+       
+       }
+     
+      
 
 }   
 

@@ -1,3 +1,31 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+header{
+    width:100%;
+    padding-right: 10%;
+    
+}
+header.image {
+    background-image:url("../assets/images/Liesjarvi6_2.jpg")!important; 
+    
+}
+header nav ul li{
+    display: inline-block;
+    /* float: left; */
+    list-style: none;
+    padding: 0 16px;
+    
+    
+}
+.wrapper {
+    margin: 0 auto 0 60px;
+    display:inline-block;
+    block-size: auto;
+    width: 100%;
+    
+}
+
 a.marnie{
     color: rgb(38, 99, 0);
     font-size: large;
@@ -22,3 +50,43 @@ div .mar {
     min-height: 590px;
     
 }
+@media screen and (max-width: 800px){
+    *{
+        padding: 0%;
+    }
+    
+    header{
+        display: block;
+        width:100%;
+        padding: 0%;
+      
+    }
+
+    div.main {
+    Display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    margin: 0%;
+    /* flex-direction: column; */
+    }
+
+    ul.margin{
+        margin-top: 10%;
+    }
+    
+    li{
+        text-align: center;
+    } 
+
+    div.mar{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 75%;
+    }
+    footer{
+        width:fit-content;
+        margin:0%;
+    }
+
+}   

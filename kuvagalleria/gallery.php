@@ -14,8 +14,9 @@
     <title>Galleria</title>
 </head>
 <body>
+<div class="wrapper wrapper-main initial-scale=1.0">
     <!-- headeri jossa otsikko -->
-    <header class="image row"><a href="index.html"></a>
+    <header class="image row"><a href="../index.html"></a>
     <h1 class="headerfp">Kanta-Hämeen Kansallispuistojen kuvagalleria</h1>
     </header>
         
@@ -46,7 +47,7 @@
         <!-- Otsikko sivulle -->
         <h1 class="h1">Kuvagalleria</h1><br><br>
            
-            <div class="wrapper">
+           
                 
                 <div class="gallery-container">
                 
@@ -84,7 +85,7 @@
                                 // Myos gallery tablesta haetaan kuvien title ja description kuvan alle riveina.
 
                                 echo ' <a href="#">
-                                <div style="background-image: url(uploads/'.$row["imgFullNameGallery"].');"></div>
+                                <div class="dal" style="background-image: url(uploads/'.$row["imgFullNameGallery"].');"></div>
                                 <h3 class="al">'.$row["titleGallery"].'</h3>
                                 <p class="pal">'.$row["descGallery"].'</p>
                                 </a>';
@@ -105,7 +106,7 @@
 
         </section>
 
-        <section>
+        <section class="lomakkeelle">
             <div>
                 
                 <!-- lomakkeelle meno galleriasta, jos haluaa lisätä galleriaan kuvia  -->
@@ -156,6 +157,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-    
+                    </div>          
 </body>
 </html>
