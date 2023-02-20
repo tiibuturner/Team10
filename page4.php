@@ -68,7 +68,8 @@ try {
            <div class="flexContainer;"> 
             <article style="flex-grow: 2;">
         <h2>Jätä viesti</h2>
-        <form id='guestbook' >
+        <p>Voit jättää meille viestin tätä kautta. Kerro mitä pidit sivuistamme sekä kuvagalleriasta.</p>
+        <form id='guestbook' method=post>
         Nimi: <br><input type='text' name='name' value='' placeholder='Nimi...'><br>
         Sähköposti: <br><input type='text' name='email' value='' placeholder='Sähköposti...'><br><br>
         Oletko käynyt Kanta-Hämeen kansallispuistoissa?<br>
@@ -84,9 +85,21 @@ try {
         <input type='button' name='ok' value='Lähetä' onclick='lahetaKommentti(this.form);'>
         <input type="reset" name="eiok" value="Tyhjennä"><br><br>
         </form>
+        <br>
+           <hr>
+        <h2>Vieraskirjaan jätetyt viestit</h2>
+        <br>    
+<?php
+$conn = mysqli_connect("db", "root", "password", "vieraskirja");
+$result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC");
+while ($row = mysqli_fetch_array($result)) {
+    echo "<h2>" . $row['name'] . "</h2>";
+    echo "<p>" . $row['message'] . "</p>";
+}
+mysqli_close($conn);
+?>
     </article>
-           </div>
-
+    </div>
     <div class="flexContainer;">
         
         <p style="flex-grow: 1;" id='result'>
