@@ -1,0 +1,12 @@
+body{
+    margin-top: 60px;
+    margin-left: 60px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+h1.otsikko{
+    color:rgb(103, 163, 109);
+    font-size:xx-large;
+}
+h2.otsikko{
+    font-size:xx-large;
+}
