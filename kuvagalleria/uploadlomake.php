@@ -44,8 +44,8 @@ session_start();
             </nav>
 
         <div class="mar">
-
-            <h1 class="h1">Kuvien lataus kansallispuiston kuvagalleriaan</h1><br><br>
+            
+            <h2 >Kuvien lataus kansallispuiston kuvagalleriaan</h2><br>
 
                 <div class="gallery-container">
                     
@@ -72,9 +72,11 @@ session_start();
                         </div>';
 
                     } else {
-                        print "Et ole kirjautuneena. Jos haluat kirjautua ladataksesi kuvia galleriaan, pääset tekemään sen täältä <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
+                        print "Et ole vielä kirjautuneena. Päästäksesi lataamaan kuvia kuvagalleriaamme, sinun tulee olla kirjautuneena. Pääset kirjautumaan sisään täältä. <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
                         print "<br><br>";
-                        print "Onko sinulla vielä tunnuksia kirjautumiseen? Jos ei niin voit rekisteröityä sivullemme täältä. <a class='marnie' href='../rekisteroityminen.html'>Rekisteröidy</a>";
+                        print "Sinulta ei löydy vielä tunnuksia, joilla kirjautua sisään? Jos haluat luoda tunnukset, joilla voit kirjautua sisään, niin pääset rekisteröintiin täältä. <a class='marnie' href='../rekisteroityminen.html'>Rekisteröidy</a>";
+                        print "<br><br>";
+                        print "Jos";
                     }
 
 

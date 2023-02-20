@@ -1,5 +1,6 @@
 a.marnie{
-    color: rgb(48, 125, 0);
+    color: rgb(38, 99, 0);
+    font-size: large;
     background-color: rgba(107, 131, 77, 0.758);
     display: inline-block;
     box-shadow: 5px 5px;
@@ -10,14 +11,14 @@ a.marnie{
 }
 
 a.marnie:hover{
-    color: rgb(163, 194, 139);
+    color: rgb(180, 214, 154);
     
 
 }
 
 div .mar {
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-left: 60px;
+    margin-top: 60px;
     min-height: 590px;
     
 }
