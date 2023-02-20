@@ -26,8 +26,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 nav ul{
     list-style: none;
 }
-header {
-    background-image:url("../assets/images/Torronsuo6_2.jpg")!important; 
+header.headerfp {
+    background-image:url("../assets/images/Liesjarvi6_2.jpg")!important; 
     /* opacity: 0.7;
     height: 250px;
     background-repeat: no-repeat;
@@ -175,9 +175,27 @@ section{
 
    
 }
-input .pekka{
-    background-color: aqua;
+
+
+a.marnie{
+    color: rgb(38, 99, 0);
+    font-size: large;
+    background-color: rgba(107, 131, 77, 0.758);
+    display: inline-block;
+    box-shadow: 5px 5px;
+    padding: 5px;
+    text-decoration: underline;
+    text-align: center;
+
 }
+
+a.marnie:hover{
+    color: rgb(180, 214, 154);
+    
+
+}
+
+
     @media screen and (max-width: 800px){
         main{
         padding-top: 50px;

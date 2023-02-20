@@ -109,8 +109,12 @@
             <div>
                 
                 <!-- lomakkeelle meno galleriasta, jos haluaa lisätä galleriaan kuvia  -->
-                <p>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</p><br>
-                <p>Pääset <a href="uploadlomake.php" ><input type="button" name="Täältä" value="Täältä" class="pekka" ></a> lisäämään omia kuviasi galleriaan.</p>
+                <br><br>
+                <h2>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</h2><br>
+                <p>Pääset täältä lisäämään omia kuvia kansallispuiston kuvagalleriaan. <a class="marnie" href="uploadlomake.php">Lisää kuvia</a></p>
+                <p>Jos haluat jakaa meille myös muistojasi tai kommentoida Kanta-Hämeen kansallispuistoja, 
+                <p>tee niin vieraskirjamme avulla. Pääset katsomaan ja kommentoimaan vieraskirjaamme täältä. <a class="marnie" href="../page4.php">Vieraskirja</a></p><br>
+
                 <br><br>           
 <?php
         
