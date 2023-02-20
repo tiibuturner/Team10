@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,23 +49,32 @@
                 <div class="gallery-container">
                     
                 <?php
-
-                    // kuvien upload lomakkeen toteutus.
-                    echo ' <div class="gallery-upload">
+                    if (isset($_SESSION["user_ok"])){
+    
+                        // session_start();
+                        print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
                     
-                        <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
+                        print "<a href='kirjauduulos.php'>Kirjaudu ulos</a>";
+                        // kuvien upload lomakkeen toteutus.
+                        echo ' <div class="gallery-upload">
+                    
+                            <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 
-                            <input type="text" name="filename" placeholder="Tiedoston nimi..."><br><br>
-                            <input type="text" name="filetitle" placeholder="Kuvan Otsikko..."><br><br>
-                            <input type="text" name="filedesc" placeholder="Kerro kuvastasi..."><br><br>
-                            <input type="file" name="file">
-                            <button type="submit" name="submit">Upload</button>
+                                <input type="text" name="filename" placeholder="Tiedoston nimi..."><br><br>
+                                <input type="text" name="filetitle" placeholder="Kuvan Otsikko..."><br><br>
+                                <input type="text" name="filedesc" placeholder="Kerro kuvastasi..."><br><br>
+                                <input type="file" name="file">
+                                <button type="submit" name="submit">Upload</button>
 
-                        </form>
+                            </form>
                 
-                    </div>';
+                        </div>';
 
-
+                    } else {
+                        print "Et ole kirjautuneena. Jos haluat kirjautua ladataksesi kuvia galleriaan, pääset tekemään sen täältä <a href='../kirjaudu.php'>Kirjaudu sisään</a>";
+                        print "<br><br>";
+                        print "Onko sinulla vielä tunnuksia kirjautumiseen? Jos ei niin voit rekisteröityä sivullemme täältä. <a href='../rekisteroityminen.html'>Rekisteröidy</a>";
+                    }
 
 
                 ?>
