@@ -55,7 +55,7 @@ session_start();
                         // session_start();
                         print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
                     
-                        print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a>";
+                        print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
                         // kuvien upload lomakkeen toteutus.
                         echo ' <div class="gallery-upload">
                     
