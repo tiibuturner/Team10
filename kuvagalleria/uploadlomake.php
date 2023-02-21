@@ -49,21 +49,20 @@ session_start();
             <h2 >Kuvien lataus kansallispuiston kuvagalleriaan</h2><br>
 
                 <div class="gallery-container">
-                    
+                
                 <?php
                 // katsotaan onko session variablet asetettu  user_ok 
                     if (isset($_SESSION["user_ok"])){
     
                         // jos on niin printataan tervetuoa 
                         print "<br><h2>Tervetuloa!</h2><br>";
-                    
                         // ja vain kun sessio on käynnissä kuvien uploadaus on näkyvissä sekä uloskirjaus.
                         // kuvien upload lomakkeen toteutus formilla sekä lopussa kirjaudu ulos nappi sekä kirjaudu ulos ehdotus.
                         echo ' <div class="gallery-upload">
                     
                             <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 
-                                <input type="text" name="filename" placeholder="Tiedoston nimi..." ><br><br>
+                                <input type="text" name="filename" placeholder="Tiedoston nimi..." " ><br><br>
                                 <input type="text" name="filetitle" placeholder="Kuvan Otsikko..." ><br><br>
                                 <input type="text" name="filedesc" placeholder="Kerro kuvastasi..." ><br><br>
                                 <input type="file" name="file">
