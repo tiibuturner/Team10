@@ -117,23 +117,6 @@
                 <p>tee niin vieraskirjamme avulla. Pääset katsomaan ja kommentoimaan vieraskirjaamme täältä. <a class="marnie" href="../page4.php">Vieraskirja</a></p><br>
 
                 <br><br>           
-<?php
-        
-            //    echo ' <div class="gallery-upload">
-            //         <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
-            //         <input type="text" name="filename" placeholder="Tiedoston nimi..."><br><br>
-            //         <input type="text" name="filetitle" placeholder="Kuvan Otsikko..."><br><br>
-            //         <input type="text" name="filedesc" placeholder="Kerro kuvastasi..."><br><br>
-            //         <input type="file" name="file">
-            //         <button type="submit" name="submit">Upload</button>
-                    
-
-
-            //         </form>
-
-
-            //     </div>';
-?>
             
             </div>
 

@@ -21,7 +21,7 @@ session_start();
     <!-- header osuus -->
     <header class="image row"><a href="../index.html"></a>
 
-        <h1 class="headerfp">Kanta-Hämeen Kansallispuistot</h1>
+        <h1 class="headerfp">Kuvien lataaminen kuvagalleriaan</h1>
 
     </header>
 
@@ -71,12 +71,13 @@ session_start();
                 
                         </div>';
 
+                    // Jos ei ole kirjautuneena upload lomake ei näy ja näkyy vain kirjautumiseen tai rekisteröitymiseen pääsy
                     } else {
                         print "Et ole vielä kirjautuneena. Päästäksesi lataamaan kuvia kuvagalleriaamme, sinun tulee olla kirjautuneena. Pääset kirjautumaan sisään täältä. <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
                         print "<br><br>";
                         print "Sinulta ei löydy vielä tunnuksia, joilla kirjautua sisään? Jos haluat luoda tunnukset, joilla voit kirjautua sisään, niin pääset rekisteröintiin täältä. <a class='marnie' href='../rekisteroityminen.html'>Rekisteröidy</a>";
                         print "<br><br>";
-                        print "Jos";
+                        
                     }
 
 
