@@ -1,8 +1,4 @@
 * {
-    /* margin:0;
-    padding:0;
-    border:0;
-    outline: 0; */
     font-size: 100%;
     vertical-align: baseline;
     
@@ -11,9 +7,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    /* border-top: 1px solid #cbcbcb; */
-    /* margin:1em 0; */
-    /* padding: 0; */
+    
 }
 
 input, select {
@@ -77,30 +71,23 @@ section{
     display:inline-block;
     block-size: auto;
     width: 100%;
-    /* width: 1250px;
-    background-color: blanchedalmond; */
+    
     
 }
 
 .gallery-links{
-    /* overflow:hidden; */
     margin-bottom: 30px ;
-   
-   
 }
 .gallery-links div{
-    /* overflow: hidden; */
     margin-bottom: 10px 10px 0 ;
     height: 100%;
     float:left;
    
 }
 .gallery-links .gallery-container{
-    /* float: left; */
     width:fit-content;
     height: auto;
     margin: 20px 10px 0px;
-    /* background-color: aqua; */
 
 }
 .gallery-container{
@@ -169,8 +156,6 @@ section{
 .h1{
     text-align: center;
     color: rgb(103, 163, 109);
-
-   
 }
 
 div.dal{
@@ -207,10 +192,6 @@ a.marnie:hover{
 
     @media screen and (max-width: 800px){
         main{
-        /* padding-top: 50px;
-        display: block;
-        margin: 0;
-        margin-left: 5%; */
         width: 75%;
      
         }

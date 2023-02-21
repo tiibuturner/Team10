@@ -54,9 +54,10 @@ session_start();
                     if (isset($_SESSION["user_ok"])){
     
                         // session_start();
-                        print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
+                        // print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
+                        print "<br><h2>Tervetuloa!</h2><br>";
                     
-                        print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
+                        // print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
                         // kuvien upload lomakkeen toteutus.
                         echo ' <div class="gallery-upload">
                     
@@ -71,10 +72,12 @@ session_start();
                             </form>
                 
                         </div>';
+                        print "<br><hr><br><a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
+                        print "Muista myös kirjautua ulos kun olet ladannut kuvat.<br><br>";
 
                     // Jos ei ole kirjautuneena upload lomake ei näy ja näkyy vain kirjautumiseen tai rekisteröitymiseen pääsy
                     } else {
-                        print "Et ole vielä kirjautuneena. Päästäksesi lataamaan kuvia kuvagalleriaamme, sinun tulee olla kirjautuneena. Pääset kirjautumaan sisään täältä. <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
+                        print "<br>Et ole vielä kirjautuneena. Päästäksesi lataamaan kuvia kuvagalleriaamme, sinun tulee olla kirjautuneena. Pääset kirjautumaan sisään täältä. <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
                         print "<br><br>";
                         print "Sinulta ei löydy vielä tunnuksia, joilla kirjautua sisään? Jos haluat luoda tunnukset, joilla voit kirjautua sisään, niin pääset rekisteröintiin täältä. <a class='marnie' href='../rekisteroityminen.html'>Rekisteröidy</a>";
                         print "<br><br>";
