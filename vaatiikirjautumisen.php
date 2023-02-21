@@ -12,7 +12,7 @@
 session_start();
 
 if (!isset($_SESSION["user_ok"])){
-    $_SESSION["paluuosoite"]="vaatiikirjautumisen.php"; /*paluuosoitteeksi vaihdettava kuvien lisäyssivu?*/
+    $_SESSION["paluuosoite"]="vaatiikirjautumisen.php";
     header("Location:../kirjaudu.php");
     exit;
 }

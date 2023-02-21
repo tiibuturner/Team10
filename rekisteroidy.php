@@ -15,14 +15,12 @@ else {
 
 $yhteys=mysqli_connect("db", "root", "password");
 $tietokanta=mysqli_select_db($yhteys,"poj_userdata");
-// $sql="insert into poj_users values(?, ?, ?, ?)";
 $sql="insert into poj_users values(?, SHA2(?, 256), ?, ?)";
 $stmt=mysqli_prepare($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, "ssss", $tunnus, $salasana, $etunimi, $sukunimi);
-// mysqli_stmt_bind_param($stmt, "ssss", $tunnus, md5($salasana), $etunimi, $sukunimi);
 mysqli_stmt_execute($stmt);
 
-/*En tiiä mikä tässä ongelmana */
+
 header("Location:kiitos.html");
 exit;
 
