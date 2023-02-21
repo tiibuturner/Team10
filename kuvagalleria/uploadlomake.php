@@ -53,24 +53,28 @@ session_start();
                 <?php
                 // katsotaan onko session variablet asetettu  user_ok 
                     if (isset($_SESSION["user_ok"])){
-    
-                        // jos on niin printataan tervetuoa 
+                        
+                        //  jos on niin printataan tervetuoa 
                         print "<br><h2>Tervetuloa!</h2><br>";
-                        // ja vain kun sessio on käynnissä kuvien uploadaus on näkyvissä sekä uloskirjaus.
-                        // kuvien upload lomakkeen toteutus formilla sekä lopussa kirjaudu ulos nappi sekä kirjaudu ulos ehdotus.
-                        echo ' <div class="gallery-upload">
+                        ?>
+                         <!-- ja vain kun sessio on käynnissä kuvien uploadaus on näkyvissä sekä uloskirjaus. -->
+                        <!--  kuvien upload lomakkeen toteutus formilla sekä lopussa kirjaudu ulos nappi sekä kirjaudu ulos ehdotus. -->
+                        <!-- echo ' <div class="gallery-upload"> -->
+                        <div class="gallery-upload">
                     
                             <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 
-                                <input type="text" name="filename" placeholder="Tiedoston nimi..." " ><br><br>
-                                <input type="text" name="filetitle" placeholder="Kuvan Otsikko..." ><br><br>
-                                <input type="text" name="filedesc" placeholder="Kerro kuvastasi..." ><br><br>
-                                <input type="file" name="file">
-                                <button type="submit" name="submit">Upload</button>
+                                <input type="text" name="filename" placeholder="Tiedoston nimi..." required oninvalid="this.setCustomValidity('Tiedoston nimi puuttuu. Täytä kenttä.')" oninput="this.setCustomValidity('')" ><br><br>
+                                <input type="text" name="filetitle" placeholder="Kuvan Otsikko..." required oninvalid="this.setCustomValidity('Kuvan otsikko puuttuu. Täytä kenttä.')" oninput="this.setCustomValidity('')"><br><br>
+                                <input type="text" name="filedesc" placeholder="Kerro kuvastasi..." required oninvalid="this.setCustomValidity('Kuvan kuvaus puuttuu. Täytä kenttä.')" oninput="this.setCustomValidity('')"><br><br>
+                                <input type="file" name="file" required oninvalid="this.setCustomValidity('Et ole valinnut kuvaa. Valitse kuva, jonka haluat ladata galleriaan.')">
+                                <button type="submit" name="submit" >Upload</button>
 
                             </form>
-                
-                        </div>';
+                        
+                            </div>
+                        <!-- </div>'; -->
+                        <?php
                         print "<br><hr><br><a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
                         print "Muista myös kirjautua ulos kun olet ladannut kuvat.<br><br>";
 

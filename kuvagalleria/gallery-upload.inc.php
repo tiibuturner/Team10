@@ -60,8 +60,15 @@
                             // jos title tai lisätiedot on tyhjät niin
                             if (empty($imageTitle) || empty($imageDesc)) {
 
-                                print 'Et täyttänyt kuvan otsikkoa tai lisätietoja kuvalle.';
-                                header("Location: uploadlomake.php");
+                                print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                                ' margin:60px;">Et täyttänyt kuvan otsikkoa tai lisätietoja kuvalle.</h3>';
+
+                                print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Muista täyttää".
+                                " kaikki kentät ja valita kuva, niin saat ladattua kuvan galleriaamme. <br><br>Pääset ".
+                                "takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                                "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                                " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
+
                                 exit();
 
                             // Muuten voidaan jatkaa eteenpäin 
@@ -74,7 +81,13 @@
                                     // jos prepare statement epäonnistuu niin se kerrotaan
                                     if(!mysqli_stmt_prepare($stmt, $sql)){
                         
-                                        echo "SQL statement failed!";
+                                        print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                                            ' margin:60px;">Yhteys virhe kuvaa ei saatu ladattua galleriaan.</h3>';
+
+                                        print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Yritä myöhemmin uudestaan.".
+                                        "Pääset takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                                            "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                                            " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
                                     
                                     // jos ei niin jatketaan eteenpäin
                                     }else{
@@ -96,9 +109,14 @@
                                             
                                             // jos stmt epäonnistui kerrotaan, että yhteyttä ei saatu
                                             if(!mysqli_stmt_prepare($stmt, $sql)){
-                                                
-                                                
-                                                echo "Tapahtui jokin virhe!";
+                                            
+                                                print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                                                ' margin:60px;">Yhteyttä ei onnistuttu muodostamaan palvelimeen ja kuvaa ei saatu ladattua galleriaan.</h3>';
+
+                                                print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Yritä myöhemmin uudestaan.".
+                                                    "<br><br>Pääset takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                                                    "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                                                    " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
                                                 
                                             // muuten jatketaan stmt:tiä
                                             }else{
@@ -118,29 +136,58 @@
                     } else {
                         
                         // kerrotaan jos file on liian iso ladattavaksi
-                        echo "Kuvan tiedosto on liian iso ladattavaksi!";
+                        print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                                ' margin:60px;">Kuva tiedosto on liian suuri ladattavaksi.</h3>';
+
+                        print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Valitse kuva,".
+                              " jonka koko ei ole liian suuri ja muista täyttää kaikki tiedot ennen kuin lähetät kuvan. <br><br>Pääset ".
+                              "takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                              "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                              " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
                         exit();
                     }
 
                 } else {
                 
                     // kerrotaan että kuvan lataamisessa tapahtui jokin virhe
-                    echo "Ladattaessa kuvaa tapahtui jokin virhe ja kuvaa ei saatu ladattua galleriaan!";
+                    print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                    ' margin:60px;">Kuvatiedostossa on joku virhe, joten kuvaa ei saatu ladattua galleriaan.</h3>';
+
+                        print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Yritä uudestaan. Valitse kuva".
+                              " ja muista täyttää kaikki tiedot ennen kuin lähetät kuvan. <br><br>Pääset ".
+                              "takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                              "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                              " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
                     exit();
                 }
         
             } else {
                 
                 //Kerrotaan että lataus epäonnistui ja, että kuvatiedoston tiedosto tyyppi oli väärä ja mitkä tiedostotyypit käyvät 
-                echo "Kuvasi tiedostotyyppi oli väärä lataa kuva oikeassa muodossa! Sopivia ovat jpg, jpeg ja png";
+                print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                    ' margin:60px;">Laittamasi kuvasi tiedostotyyppi on väärässä muodossa!</h3>';
+
+                        print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Sopivia ovat,".
+                              " jpg, jpeg ja png muodossa olevat kuvat. Muista myös täyttää kaikki tiedot ennen". 
+                              "kuin lähetät kuvan. <br><br>Pääset takaisin lomakkeelle viereisestä painikkeesta.". 
+                              "<a style='color: rgb(38, 99, 0); background-color: rgba(107, 131, 77, 0.758); ".
+                              "text-decoration: none; padding: 5px; text-align: center; box-shadow: 5px 5px;'".
+                              " href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
                 exit();
             }
 
 
 
     } else {
-        echo 'Tapahtui jokin virhe. Tiedot eivät siirtyneet lomakkeelta';
-        echo "<br><br><a class='marnie' href='uploadlomake.php'>Takaisin</a>";
+        // Ilmoitetaan virheestä jos lomakkeelta ei saatu dataa
+        print '<h3 style="font-family: Arial, Helvetica, sans-serif; color:rgb(103, 163, 109);'.
+                    ' margin:60px;">Tapahtui jokin virhe ja kuvaa ei saatu ladattua galleriaan.</h3>';
+
+                        print "<p style='font-family: Arial, Helvetica, sans-serif; margin:60px;'>Yritä uudestaan".
+                              " ladata kuva ja muista täyttää kaikki kuvan tiedot ennen kuin lähetät kuvan. <br><br>Pääset ".
+                              "takaisin lomakkeelle viereisestä painikkeesta. <a style='color: rgb(38, 99, 0); background-color: ".
+                              "rgba(107, 131, 77, 0.758); text-decoration: none; padding: 5px; text-align: center;".
+                              " box-shadow: 5px 5px;' href='./uploadlomake.php'>Takaisin lomakkeelle.</a></p>";
         exit();
     }
     // suljetaan yhteys
