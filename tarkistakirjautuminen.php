@@ -19,6 +19,7 @@ mysqli_stmt_bind_param($stmt, "ss", $tunnus, $salasana);
 mysqli_execute($stmt);
 $tulos=mysqli_stmt_get_result($stmt);
 
+
 if ($rivi=mysqli_fetch_object($tulos)){
     $_SESSION["user_ok"]="ok";
     header("Location:../Team10/kuvagalleria/uploadlomake.php");
