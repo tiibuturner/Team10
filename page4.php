@@ -26,8 +26,11 @@ try {
 
       .fontti2 {
             font-size: large;
-            font-weight: 600;
+            font-weight: 300;
             }
+      input[type=radio] {
+            accent-color:rgb(138, 145, 111);
+      }
 </style>
 </head>
 <body>
