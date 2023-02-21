@@ -115,7 +115,8 @@
                 <h2>Haluatko lisätä omia kansallispuisto muistojasi kuvagalleriaamme?</h2><br>
                 <p>Pääset täältä lisäämään omia kuvia kansallispuiston kuvagalleriaan. <a class="marnie" href="uploadlomake.php">Lisää kuvia</a></p>
                 <p>Jos haluat jakaa meille myös muistojasi tai kommentoida Kanta-Hämeen kansallispuistoja, 
-                <p>tee niin vieraskirjamme avulla. Pääset katsomaan ja kommentoimaan vieraskirjaamme täältä. <a class="marnie" href="../page4.php">Vieraskirja</a></p><br>
+                <p>tee niin vieraskirjamme avulla. Pääset katsomaan ja kommentoimaan vieraskirjaamme täältä. <a class="marnie" href="../page4.php">Vieraskirja</a></p>
+                <p>Muistithan kirjautua ulos ladattuasi kuviasi galleriaamme. Jos et voit tehdä sen myös tästä. <a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a></p>
 
                 <br><br>           
             

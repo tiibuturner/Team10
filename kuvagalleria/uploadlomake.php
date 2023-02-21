@@ -73,6 +73,7 @@ session_start();
                 
                         </div>';
                         print "<br><hr><br><a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
+                        print "Muista myös kirjautua ulos kun olet ladannut kuvat.<br><br>";
 
                     // Jos ei ole kirjautuneena upload lomake ei näy ja näkyy vain kirjautumiseen tai rekisteröitymiseen pääsy
                     } else {
