@@ -20,5 +20,7 @@ Tunnus:<br> <input type="text" name="tunnus" value="" size="25" ><br><br>
 Salasana:<br> <input type="password" name="salasana" value="" size="25" ><br><br>
 <input type="submit" name="ok" value="OK"><br>
 </form>
+
+<br><br><a class='marnie' href='../Team10/kuvagalleria/uploadlomake.php'>Takaisin</a>
 </body>
 </html>
