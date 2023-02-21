@@ -49,6 +49,7 @@ try {
             <li><a href="page3.html">Yleistä</a></li>
             <li><a href="page4.php">Vieraskirja</a></li>
             <li><a href="kuvagalleria/gallery.php">Kuvagalleria</a></li>
+            <li class="spa"><a class="spa" href="../Team10/kuvagalleria/uploadlomake.php">Lisää kuva<br>galleriaan</a></li>
         </ul>
     </nav>
       
