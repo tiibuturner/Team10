@@ -13,10 +13,10 @@
         <h1 class="otsikko">Henkilötietojen lisäys</h1>
 
         <form action="rekisteroidy.php" method="post">
-            Tunnus:<br> <input type="text" name="tunnus" value="" size="25" ><br><br>
-            Salasana:<br> <input type="password" name="salasana" value="" size="25"><br><br>
-            Etunimi:<br> <input type="text" name="etunimi" value="" size="25"><br><br>
-            Sukunimi:<br> <input type="text" name="sukunimi" value="" size="25"><br><br>
+            Tunnus:<br> <input type="text" name="tunnus" value="" size="25" required oninvalid="this.setCustomValidity('Täytä kenttä.')" oninput="this.setCustomValidity('')" ><br><br>
+            Salasana:<br> <input type="password" name="salasana" value="" size="25" required oninvalid="this.setCustomValidity('Täytä kenttä.')" oninput="this.setCustomValidity('')"><br><br>
+            Etunimi:<br> <input type="text" name="etunimi" value="" size="25" required oninvalid="this.setCustomValidity('Täytä kenttä.')" oninput="this.setCustomValidity('')"><br><br>
+            Sukunimi:<br> <input type="text" name="sukunimi" value="" size="25" required oninvalid="this.setCustomValidity('Täytä kenttä.')" oninput="this.setCustomValidity('')"><br><br>
             <input type="submit" name="ok" value="OK"><br>
 
         </form>
