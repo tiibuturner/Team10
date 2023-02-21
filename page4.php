@@ -89,15 +89,15 @@ try {
            <hr>
         <h2>Vieraskirjaan jätetyt viestit</h2>
         <br>    
-<?php
-$conn = mysqli_connect("db", "root", "password", "vieraskirja");
-$result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC");
-while ($row = mysqli_fetch_array($result)) {
-    echo "<h2>" . $row['name'] . "</h2>";
-    echo "<p>" . $row['message'] . "</p>";
-}
-mysqli_close($conn);
-?>
+        <?php
+            $conn = mysqli_connect("db", "root", "password", "vieraskirja");
+            $result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC");
+                while ($row = mysqli_fetch_array($result)) {
+                        echo "<h2>" . $row['name'] . "</h2>";
+                        echo "<p>" . $row['message'] . "</p>";
+        }
+            mysqli_close($conn);
+        ?>
     </article>
     </div>
     <div class="flexContainer;">
