@@ -61,7 +61,7 @@
                             if (empty($imageTitle) || empty($imageDesc)) {
 
                                 print 'Et täyttänyt kuvan otsikkoa tai lisätietoja kuvalle.';
-                                header("Location: gallery.php?upload=empty");
+                                header("Location: uploadlomake.php");
                                 exit();
 
                             // Muuten voidaan jatkaa eteenpäin 
@@ -138,7 +138,11 @@
 
 
 
-    } 
+    } else {
+        echo 'Tapahtui jokin virhe. Tiedot eivät siirtyneet lomakkeelta';
+        echo "<br><br><a class='marnie' href='uploadlomake.php'>Takaisin</a>";
+        exit();
+    }
     // suljetaan yhteys
     mysqli_close($conn);
     exit;

@@ -49,23 +49,22 @@ session_start();
             <h2 >Kuvien lataus kansallispuiston kuvagalleriaan</h2><br>
 
                 <div class="gallery-container">
-                    
+                
                 <?php
+                // katsotaan onko session variablet asetettu  user_ok 
                     if (isset($_SESSION["user_ok"])){
     
-                        // session_start();
-                        // print "<h2>Tervetuloa, ".$_SESSION["user_ok"]."!</h2>";
+                        // jos on niin printataan tervetuoa 
                         print "<br><h2>Tervetuloa!</h2><br>";
-                    
-                        // print "<a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
-                        // kuvien upload lomakkeen toteutus.
+                        // ja vain kun sessio on käynnissä kuvien uploadaus on näkyvissä sekä uloskirjaus.
+                        // kuvien upload lomakkeen toteutus formilla sekä lopussa kirjaudu ulos nappi sekä kirjaudu ulos ehdotus.
                         echo ' <div class="gallery-upload">
                     
                             <form action="gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 
-                                <input type="text" name="filename" placeholder="Tiedoston nimi..."><br><br>
-                                <input type="text" name="filetitle" placeholder="Kuvan Otsikko..."><br><br>
-                                <input type="text" name="filedesc" placeholder="Kerro kuvastasi..."><br><br>
+                                <input type="text" name="filename" placeholder="Tiedoston nimi..." " ><br><br>
+                                <input type="text" name="filetitle" placeholder="Kuvan Otsikko..." ><br><br>
+                                <input type="text" name="filedesc" placeholder="Kerro kuvastasi..." ><br><br>
                                 <input type="file" name="file">
                                 <button type="submit" name="submit">Upload</button>
 
@@ -75,7 +74,8 @@ session_start();
                         print "<br><hr><br><a class='marnie' href='kirjauduulos.php'>Kirjaudu ulos</a> <br><br>";
                         print "Muista myös kirjautua ulos kun olet ladannut kuvat.<br><br>";
 
-                    // Jos ei ole kirjautuneena upload lomake ei näy ja näkyy vain kirjautumiseen tai rekisteröitymiseen pääsy
+                    // Jos ei ole kirjautuneena upload lomake ei siis näy 
+                    // ja tulostuu vain kirjautumiseen tai rekisteröitymiseen pääsy. Nämä eivät näy jos on sisään kirjautunut.
                     } else {
                         print "<br>Et ole vielä kirjautuneena. Päästäksesi lataamaan kuvia kuvagalleriaamme, sinun tulee olla kirjautuneena. Pääset kirjautumaan sisään täältä. <a class='marnie' href='../kirjaudu.php'>Kirjaudu sisään</a>";
                         print "<br><br>";
@@ -106,7 +106,7 @@ session_start();
         </div>
 
     </footer>
-
+    <!-- bootstapin koodi juttu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
  
 </body>
