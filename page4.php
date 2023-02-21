@@ -19,7 +19,16 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/vieraskirjastyle.css">
+    <style>
+      .fontti1 {
+            font-size: medium;
+            }
 
+      .fontti2 {
+            font-size: large;
+            font-weight: 600;
+            }
+</style>
 </head>
 <body>
 
@@ -92,8 +101,11 @@ try {
             $conn = mysqli_connect("db", "root", "password", "vieraskirja");
             $result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC");
                 while ($row = mysqli_fetch_array($result)) {
-                        echo "<h2>" . $row['name'] . "</h2>";
-                        echo "<p>" . $row['message'] . "</p>";
+                        echo "<h2 class='fontti2'>" . $row['name'] . "</h2>";
+                if ($row['kaynyt'] = 2) {
+                        echo "<p class='fontti1'> En ole käynyt Kanta-Hämeen kansallispuistossa. </p>";
+                } else echo "<p> Olen käynyt Kanta-Hämeen kansallispuistossa. </p>";
+                        echo "<p class='fontti2'>" . $row['message'] . "</p><hr>";
         }
             mysqli_close($conn);
         ?>
