@@ -1,4 +1,7 @@
 <?php
+// $tunnusErr = $salasanaErr = $etunimiErr = $sukunimiErr = "";
+// $tunnus = $salasana = $etunimi = $etunimi = $sukunimi = "";
+
 if (isset($_POST["tunnus"]) && isset($_POST["salasana"]) && 
     isset($_POST["etunimi"]) && isset($_POST["sukunimi"])) {
 
@@ -12,6 +15,8 @@ else {
     header("Location:rekisteroityminen.html");
     exit;
 }
+
+
 
 $yhteys=mysqli_connect("db", "root", "password");
 $tietokanta=mysqli_select_db($yhteys,"poj_userdata");
