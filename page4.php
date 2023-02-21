@@ -55,23 +55,33 @@ try {
     <script>
         function lahetaKommentti(lomake){
             var kommentti=new Object();
+            /* Luodaan javascript olio ja annetaan halutut ominaisuudet. */
             kommentti.name=lomake.name.value;
             kommentti.email=lomake.email.value;
             kommentti.message=lomake.message.value;
             kommentti.kaynyt=(kaynyt0.checked==true ? 1 : 2);
+            /* Muodostetaan JSON merkkijono seuraavalla lauseella */
             var jsonKommentti=JSON.stringify(kommentti);
             result.innerHTML=jsonKommentti;
             
+            /* Alla luodaan http-pyyntö-olio, jolla sitten tehdään varsinainen http-pyyntö. */
             xmlhttp = new XMLHttpRequest();
+            /* Alla anonyymi tapahtumankäsittelijäfunktio pyynnön tilan muutoksille: 
+            Kun http-pyynnön tila muuttuu, tätä funktiota kutsutaan. Meillä tilana pyyntö (request) käsittely.*/
             xmlhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
+              if (this.readyState == 4 && this.status == 200)
+            /* Jos pyynnön tila on "onnistunut" (200) ja pyyntö on "valmis" (4) eli response on tullut perille.*/ {
                     document.getElementById("result").innerHTML = this.responseText;
               }
             };
             xmlhttp.open("POST", "./addcomment.php", true);
+            /* Dokumentin elementin 'result' sisällöksi laitetaan KAIKKI mitä palvelinohjelma addcomment.php tulostaa.
+            Pyyntö määritelty (POST) ja pyyntö lähetetään asynkronisesti (true)*/
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            /* Pyynnölle asetetaan 'Content-type' otsikkotieto "application/x-www-form-urlencoded", 
+            joka tavallisessa html-lomakkeessa on automaattisesti. */
             xmlhttp.send("kommentti=" + jsonKommentti);	
-            
+            /* Aiemmin luotu Javascript olio lähetetään json-merkkijono avaimella "kommentti". */
         }
         </script>
            <div class="flexContainer;"> 
