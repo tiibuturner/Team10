@@ -10,3 +10,20 @@ h1.otsikko{
 h2.otsikko{
     font-size:xx-large;
 }
+a.marnie{
+    color: rgb(38, 99, 0);
+    font-size: large;
+    background-color: rgba(107, 131, 77, 0.758);
+    display: inline-block;
+    box-shadow: 5px 5px;
+    padding: 5px;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+a.marnie:hover{
+    color: rgb(180, 214, 154);
+    
+
+}
