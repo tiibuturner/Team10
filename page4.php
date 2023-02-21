@@ -85,8 +85,7 @@ try {
         <input type='button' name='ok' value='Lähetä' onclick='lahetaKommentti(this.form);'>
         <input type="reset" name="eiok" value="Tyhjennä"><br><br>
         </form>
-        <br>
-           <hr>
+           <hr><br>
         <h2>Vieraskirjaan jätetyt viestit</h2>
         <br>    
         <?php
