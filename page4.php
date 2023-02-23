@@ -1,5 +1,5 @@
 <?php
-$initials=parse_ini_file("../.ht.asetukset.ini");
+$initials=parse_ini_file("../Team10/.ht.asetukset.ini");
 try {
     $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
 } catch (Exception $e) {
@@ -67,7 +67,7 @@ try {
             kommentti.kaynyt=(kaynyt0.checked==true ? 1 : 2);
             /* Muodostetaan JSON merkkijono seuraavalla lauseella */
             var jsonKommentti=JSON.stringify(kommentti);
-            // result.innerHTML=jsonKommentti;
+            /*result.innerHTML=jsonKommentti;*/
             
             /* Alla luodaan http-pyyntö-olio, jolla sitten tehdään varsinainen http-pyyntö. */
             xmlhttp = new XMLHttpRequest();

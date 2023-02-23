@@ -1,6 +1,6 @@
 <?php
 session_start();
-$initials=parse_ini_file("../.ht.asetukset.ini");
+$initials=parse_ini_file("../Team10/.ht.asetukset.ini");
 
 if(isset($_POST["tunnus"]) && isset($_POST["salasana"])){
     $tunnus=$_POST["tunnus"];

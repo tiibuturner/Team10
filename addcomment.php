@@ -1,5 +1,5 @@
 <?php
-$initials=parse_ini_file("../.ht.asetukset.ini");
+
 $json=isset($_POST["kommentti"]) ? $_POST["kommentti"] : "";
 if (!($kommentti=tarkistaJson($json))){
     print "Täytä kaikki kentät";
@@ -7,7 +7,7 @@ if (!($kommentti=tarkistaJson($json))){
 }
 
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
-
+$initials=parse_ini_file("../Team10/.ht.asetukset.ini");
 try {
     $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
 } catch (Exception $e) {
