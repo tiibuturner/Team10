@@ -1,5 +1,6 @@
 <?php
 session_start();
+$initials=parse_ini_file("../.ht.asetukset.ini");
 
 if(isset($_POST["tunnus"]) && isset($_POST["salasana"])){
     $tunnus=$_POST["tunnus"];
@@ -10,8 +11,8 @@ else{
     exit;
 }
 
-$yhteys=mysqli_connect("db","root","password");
-$tietokanta=mysqli_select_db($yhteys, "poj_userdata");
+$yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
+
 
 $sql="select * from poj_users where tunnus=? and salasana=SHA2(?, 256)";
 $stmt=mysqli_prepare($yhteys, $sql);

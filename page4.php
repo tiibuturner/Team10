@@ -1,6 +1,7 @@
 <?php
+$initials=parse_ini_file("../.ht.asetukset.ini");
 try {
-    $yhteys=mysqli_connect("db", "root", "password", "vieraskirja");
+    $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
 } catch (Exception $e) {
     header("Location:index.php");
     exit;
@@ -66,7 +67,7 @@ try {
             kommentti.kaynyt=(kaynyt0.checked==true ? 1 : 2);
             /* Muodostetaan JSON merkkijono seuraavalla lauseella */
             var jsonKommentti=JSON.stringify(kommentti);
-            result.innerHTML=jsonKommentti;
+            // result.innerHTML=jsonKommentti;
             
             /* Alla luodaan http-pyyntö-olio, jolla sitten tehdään varsinainen http-pyyntö. */
             xmlhttp = new XMLHttpRequest();
@@ -112,7 +113,7 @@ try {
         <h2>Vieraskirjaan jätetyt viestit</h2>
         <br>    
         <?php
-            $conn = mysqli_connect("db", "root", "password", "vieraskirja");
+            $conn = mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
             $result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC");
                 while ($row = mysqli_fetch_array($result)) {
                         echo "<h2 class='fontti2'>" . $row['name'] . "</h2>";

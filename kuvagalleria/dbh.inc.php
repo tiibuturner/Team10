@@ -1,12 +1,9 @@
 <?php
-
+$initials=parse_ini_file("../.ht.asetukset.ini");
 // tehdään stmt tarvittavista tiedoista oma muuttujansa helpottaakseen asioita
-$servername = "db";
-$username = "root";
-$password = "password";
-$dbname = "kuvagallery";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$conn = mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
 
 
 
