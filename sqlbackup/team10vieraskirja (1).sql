@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: 23.02.2023 klo 11:01
+-- Generation Time: 23.02.2023 klo 11:49
 -- Palvelimen versio: 8.0.30
 -- PHP Version: 8.0.19
 
@@ -54,6 +54,13 @@ CREATE TABLE `gallery` (
   `orderGallery` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Vedos taulusta `gallery`
+--
+
+INSERT INTO `gallery` (`idGallery`, `titleGallery`, `descGallery`, `imgFullNameGallery`, `orderGallery`) VALUES
+(1, 'puita', 'kuvassa liesjärven metsää', 'metsä.63f74c00370512.49310866.jpg', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +75,13 @@ CREATE TABLE `guestbook` (
   `kaynyt` int NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Vedos taulusta `guestbook`
+--
+
+INSERT INTO `guestbook` (`id`, `name`, `email`, `message`, `kaynyt`) VALUES
+(1, 'Linzku', 'sdfg', ' sdfg', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -80,6 +94,13 @@ CREATE TABLE `poj_users` (
   `etunimi` varchar(100) NOT NULL,
   `sukunimi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Vedos taulusta `poj_users`
+--
+
+INSERT INTO `poj_users` (`tunnus`, `salasana`, `etunimi`, `sukunimi`) VALUES
+('Pekka', '3f39d75d5d80221017f66db519bedb2ab2b34d2ea7774de00f4fc0c5a071ad96', 'Pekka', 'Pekkanen');
 
 --
 -- Indexes for dumped tables
@@ -96,6 +117,12 @@ ALTER TABLE `checkbox`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`idGallery`);
+
+--
+-- Indexes for table `guestbook`
+--
+ALTER TABLE `guestbook`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `poj_users`
@@ -117,7 +144,13 @@ ALTER TABLE `checkbox`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `idGallery` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idGallery` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `guestbook`
+--
+ALTER TABLE `guestbook`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
